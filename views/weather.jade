@@ -1,0 +1,89 @@
+//
+   Created by Briana on 10/26/15.
+
+//
+   Created by Briana on 10/26/15.
+doctype html
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/weather.css')
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
+      link(href='http://fonts.googleapis.com/css?family=Patua+One', rel='stylesheet', type='text/css')
+      link(href='http://fonts.googleapis.com/css?family=Niconne', rel='stylesheet', type='text/css')
+      script(src="https://fb.me/react-0.13.3.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+   block content
+      body
+         link(href='http://fonts.googleapis.com/css?family=Kurale', rel='stylesheet', type='text/css')
+         p
+            | Location
+         br
+         p.response.info
+         p
+            | Weather
+         p.temp.info
+         br
+         p.rain.info
+         br
+         p.wind.info
+   script.
+      var city = "";
+      var zip = "";
+      var state = "";
+      //get zip && city
+      jQuery.ajax({
+         url: "http://ipinfo.io",
+         jsonp: "callback",
+         dataType: "jsonp",
+         data: {
+            q: "select 	title,abstract,url from search.news where query=\"\"",
+            format: "json"
+         },
+         success: function (response) {
+            console.log(response);
+            city = response.city.toString();
+            zip = response.postal.toString();
+            $('.response').append(city + ", " + zip);
+            var getState = ("http://api.wunderground.com/api/75fccdfe0b1075c9/geolookup/q/" + zip + ".json");
+            jQuery.ajax({
+               url: getState,
+               jsonp: "callback",
+               dataType: "jsonp",
+               data: {
+                  q: "select 	title,abstract,url from search.news where query=\"\"",
+                  format: "json"
+               },
+               success: function (response) {
+                  console.log(response);
+                  state = response.location.state.toString();
+                  var weatherAPI = ("http://api.wunderground.com/api/75fccdfe0b1075c9/conditions/q/" + state + "/" + city + ".json");
+                  jQuery.ajax({
+                     url: weatherAPI,
+                     jsonp: "callback",
+                     dataType: "jsonp",
+                     data: {
+                        q: "select 	title,abstract,url from search.news where query=\"\"",
+                        format: "json"
+                     },
+                     success: function (response) {
+                        console.log(response);
+                        $('.temp').append(response.current_observation.temp_f.toString() + "&#176;f");
+                        var temp = response.current_observation.temp_f;
+                        $('.rain').append(response.current_observation.precip_1hr_in.toString() + '" of precipitation this hour');
+                        $('.wind').append("Wind: " + response.current_observation.wind_string);
+                        if (temp >= 85) {
+                           $('body').css({"background-image": 'url("http://cjme.com/sites/default/files/news-image/agriculture-AS-west%20of%20Lumsden-Hot%20weather%20has%20helped%20farmers%20catch%20up%20in%20a%20late%20harvest.%20Aug%205,%202013.JPG")'});
+                        } else if ((temp >= 50) && (temp < 85)) {
+                           $('body').css({"background-image": 'url("http://www.boehmerwaldurlaub.com/web-content/Bilder/Willkommen%20allen%20Fruehlingsgaesten%20im%20Haus%20Sonne.jpg")'});
+                        } else if (temp >= 32) {
+                           $('body').css({"background-image": 'url("https://718be87de2f7403df3e8-1d1221e10f82d636f1f5dc20a850700a.ssl.cf5.rackcdn.com/files/coldweather_sleepingcolddog_pic6.jpg")'});
+                        }
+                     }
+                  });
+               }
+            });
+         }
+      });

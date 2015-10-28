@@ -1,0 +1,47 @@
+a{
+    color: #003F91;
+}
+
+body{
+    background-color: #E5F4E3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header{
+    text-align: center;
+}
+h1{
+    color: #6D326D;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+}
+
+h6 {
+    color: #003F91;
+}
+
+.results{
+
+    border-radius: 10px;
+    margin: 15px;
+    padding: 5px;
+}
+
+#searchBtn{
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 4em;
+    width: 4em;
+    border-radius: 10px;
+    background-color: #6D326D;
+    color: #FFFFFF;
+}
+
+input {
+    padding: 12px;
+    width: 50%;
+    border-radius: 10px;
+    font-size: 1em;
+}

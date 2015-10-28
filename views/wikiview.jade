@@ -1,0 +1,79 @@
+//
+   Created by Briana on 10/26/15.
+
+doctype html
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/wikiview.css')
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
+      link(href='http://fonts.googleapis.com/css?family=Patua+One', rel='stylesheet', type='text/css')
+      link(href='http://fonts.googleapis.com/css?family=Niconne', rel='stylesheet', type='text/css')
+      script(src="https://fb.me/react-0.13.3.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+   block content
+      link(href='http://fonts.googleapis.com/css?family=Roboto', rel='stylesheet', type='text/css')
+      .header
+         h1 Wikipedia Viewer
+         h6 Type below, then press go.
+         br
+         input#searchTxt(type='text', placeholder='search')
+         button#searchBtn go
+      br
+      #0.results.zero
+      #1.results.one
+      #2.results.two
+      #3.results.three
+      #4.results.four
+      #5.results.five
+      #6.results.six
+      #7.results.seven
+      #8.results.eight
+      #9.results.nine
+      script.
+         /**
+          * Created by Briana on 10/26/15.
+          */
+         //function to turn " " into "_"
+         function linkable(title) {
+            var searchMe = title.split(" ");
+            return searchMe.join("-");
+         }
+         $(document).ready(function () {
+            //get user search from input
+            //when "searchBtn" is clicked
+            //getElementById('searchTxt')
+            $("#searchBtn").click(function () {
+               var input1 = document.getElementById('searchTxt').value;
+               var input2 = linkable(input1);
+               var link = "http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=" + input2;
+               jQuery.ajax({
+                  url: link,
+                  jsonp: "callback",
+                  dataType: "jsonp",
+                  data: {
+                     q: "select 	title,abstract,url from search.news where query=\"\"",
+                     format: "json"
+                  },
+                  success: function (response) {
+                     console.log(response);
+                     $('.results').empty();
+                     var keys = Object.keys(response.query.pages);
+                     for (var i = 0; i < keys.length; i++) {
+                        console.log(response.query.pages[keys[i]].extract.toString());
+                        var sendItTo = "#" + i.toString();
+                        $(sendItTo).append("<h1><a href='http://en.wikipedia.org/?curid=" + response.query.pages[keys[i]].pageid.toString() + "'>" + response.query.pages[keys[i]].title.toString() + "</a></h1><br>");
+                        $(sendItTo).append(response.query.pages[keys[i]]);
+                        $(sendItTo).append("<p>" + response.query.pages[keys[i]].extract.toString() + "</p><br>");
+                     }
+                  }
+               });
+               //https://www.mediawiki.org/wiki/API:Main_page
+               //turn that into an api call
+               //http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=
+               //return jsonp info from api
+            });
+         })
+

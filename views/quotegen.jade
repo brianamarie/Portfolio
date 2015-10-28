@@ -1,0 +1,233 @@
+//
+   Created by Briana on 10/26/15.
+doctype html
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/quotegen.css')
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
+      link(href='http://fonts.googleapis.com/css?family=Patua+One', rel='stylesheet', type='text/css')
+      link(href='http://fonts.googleapis.com/css?family=Niconne', rel='stylesheet', type='text/css')
+      script(src="https://fb.me/react-0.13.3.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+   block content
+      body
+         div
+            p.append(align='center')
+            br
+            p.author
+         br
+         form(align='center')
+            button(onclick='history.go(0)')  More
+         // <a href="https://twitter.com/share" class="twitter-share-button" data-via="brianamarie132" data-related="freecodecamp" data-hashtags="learntocode">Tweet</a>!
+         script.
+            //array of objects, quotes with keys of id:, quote:, & author:
+            var quotes = [{
+               id: 0,
+               quote: "Let the refining and improving of your own life keep you so busy that you have little time to criticize others.",
+               author: "H. Jackson Brown Jr."
+            }, {
+               id: 1,
+               quote: "You are far too smart to be the only thing standing in your way.",
+               author: "Jennifer Freeman",
+            }, {
+               id: 2,
+               quote: "Every accomplishment starts with the decision to try.",
+               author: "Gail Devers",
+            }, {
+               id: 3,
+               quote: "Love yourself first and everything else falls into line.",
+               author: "Lucille Ball",
+            }, {
+               id: 4,
+               quote: "Good for her! Not for me. That is the motto women should constantly repeat over and over again.",
+               author: "Amy Poehler",
+            }, {
+               id: 5,
+               quote: "Decide what your currency is early. Let go of what you will never have. People who do this are happier and sexier.",
+               author: "Amy Poehler",
+            }, {
+               id: 6,
+               quote: "Ignore what other people think. Most people aren't even paying attention to you.",
+               author: "Amy Poehler",
+            }, {
+               id: 7,
+               quote: "Nobody looks crazy when they're having fun.",
+               author: "Amy Poehler",
+            }, {
+               id: 8,
+               quote: "If you are not willing to look stupid, nothing great is every going to happen to you.",
+               author: "Dr.Gregory House",
+            }, {
+               id: 9,
+               quote: "Your crown has been bought and paid for. Put it on your head and wear it.",
+               author: "Dr. Maya Angelou",
+            }, {
+               id: 10,
+               quote: "Worrying is like sitting in a rocking chair. It gives you something to do but it doesn't get you anywhere.",
+               author: "English proverb",
+            }, {
+               id: 11,
+               quote: "We cannot start over, but we can begin now, and make a new ending.",
+               author: "Zig Ziglar",
+            }, {
+               id: 12,
+               quote: "Go confidently in the direction of your dreams. Live the life you have imagined.",
+               author: "Henry David Thoreau",
+            }, {
+               id: 13,
+               quote: "It does not matter how slowly you go as long as you do not stop.",
+               author: "Confucius",
+            }, {
+               id: 14,
+               quote: "When you're curious, you find lots of interesting things to do.",
+               author: "Walt Disney",
+            }, {
+               id: 15,
+               quote: "Success isn't owned, it's leased. And rent is due every day.",
+               author: "J. J. Watt",
+            }, {
+               id: 16,
+               quote: "It takes years as a woman to unlearn what you have been taught to be sorry for.",
+               author: "Amy Poehler",
+            }, {
+               id: 17,
+               quote: "When you judge another, you do not define them, you define yourself.",
+               author: "Wayne Dyer",
+            }, {
+               id: 18,
+               quote: "Just say yes and you'll figure it out afterwards.",
+               author: "Tina Fey",
+            }, {
+               id: 19,
+               quote: "Get up, dress up, show up, and never give up.",
+               author: "Genevieve Rhode",
+            }, {
+               id: 20,
+               quote: "Self-worth is so vital to your happiness; if you don't feel good about YOU, it's hard to feel good about anything else.",
+               author: "Sandy Hale",
+            }, {
+               id: 21,
+               quote: "Never give up on what you really want to do. The person with big dreams is more powerful than the one with all the facts.",
+               author: "Albert Einstein",
+            }, {
+               id: 22,
+               quote: "If you give up at the first sign of struggle, you really aren't ready to be successful.",
+               author: "Kevin Hart",
+            }, {
+               id: 23,
+               quote: "That's what people do who love you. They put their arms around you and love you when you're not so lovable.",
+               author: "Deb Caletti",
+            }, {
+               id: 24,
+               quote: "The best way to cheer yourself up is to try to cheer somebody else up.",
+               author: "Mark Twain",
+            }, {
+               id: 25,
+               quote: "What we see depends mainly on what we look for.",
+               author: "John Lubbock",
+            }, {
+               id: 26,
+               quote: "Be silly, be honest, be kind.",
+               author: "Ralph Waldo Emerson",
+            }, {
+               id: 27,
+               quote: "Your attitude belongs to you and it's your choice if you want to have a good one.",
+               author: "Joyce Meyer",
+            }, {
+               id: 28,
+               quote: "A child who sings is a happy child.",
+               author: "Enrique Falabella",
+            }, {
+               id: 29,
+               quote: "You are valuable because you exist, not because of what you do or what you have done, but simply because you are.",
+               author: "Max Lucado",
+            }, {
+               id: 30,
+               quote: "We don't see things as they are, we see things as we are.",
+               author: "Lion King",
+            }, {
+               id: 31,
+               quote: "We have to choose joy and keep choosing it.",
+               author: "Henri J. M. Nouwen",
+            }, {
+               id: 32,
+               quote: "Be somebody who makes everybody feel like a somebody.",
+               author: "Kid President",
+            }, {
+               id: 33,
+               quote: "Getting over a painful experience is much like crossing the monkey bars. You have to let go at some point in order to move forward.",
+               author: "C. S. Lewis",
+            }, {
+               id: 34,
+               quote: "I'm not interested in competing with anyone. I hope we all make it.",
+               author: "Erica Cook",
+            }, {
+               id: 35,
+               quote: "Great things are done by a series of small things brought together.",
+               author: "Vincent Van Gogh",
+            }, {
+               id: 36,
+               quote: "Success is fickle, but creativity is a gift.",
+               author: "Tommy Shaw",
+            }, {
+               id: 37,
+               quote: "I hereby arm myself today with coffee and the willingness to be wrong.",
+               author: "Frida Martinez-Sanchez",
+            }, {
+               id: 38,
+               quote: "A strong woman stands up for herself. A stronger woman stands up for everyone else.",
+               author: "Elaine Cooper",
+            }, {
+               id: 39,
+               quote: "Know the rules well, so you can break them effectively",
+               author: "Dalai Lama XIV",
+            }, {
+               id: 40,
+               quote: "The weak can never forgive. Forgiveness is the attribute of the strong.",
+               author: "Mahatma Gandhi",
+            }, {
+               id: 41,
+               quote: "The art of being happy lies in the power of extracting happiness from common things.",
+               author: "Henry Ward Beecher",
+            }, {
+               id: 42,
+               quote: "When you stop doing things for fun you might as well be dead.",
+               author: "Hemingway",
+            }, {
+               id: 43,
+               quote: "May your choices reflect your hopes, not your fears.",
+               author: "Nelson Mandela",
+            }, {
+               id: 44,
+               quote: "When bankers get together for dinner they discuss art. When artists get together for dinner they discuss money.",
+               author: "Oscar Wilde",
+            }, {
+               id: 22,
+               quote: "If you give up at the first sign of struggle, you really aren't ready to be successful.",
+               author: "Kevin Hart",
+            }];
+            //obtaining random whole intiger within array of objects
+            var current = (Math.random() * (quotes.length - 0));
+            var current1 = Math.round(current);
+            //jQuery putting into div the current random quote and author
+            $(document).ready(
+                    $('.append').append(quotes[current1].quote.toString())
+            );
+            $(document).ready(
+                    $('.author').append("-").append(quotes[current1].author.toString())
+            );
+            //twitter code
+            !function (d, s, id) {
+               var js, fjs = d.getElementsByTagName(s)[0],
+                       p = /^http:/.test(d.location) ? 'http' : 'https';
+               if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  //js.id = quotes[current1].quote.toString());
+                  js.id = id;
+                  js.src = p + '://platform.twitter.com/widgets.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+               }
+            }(document, 'script', 'twitter-wjs');

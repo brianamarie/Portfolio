@@ -1,0 +1,21 @@
+//
+   Created by Briana on 10/26/15.
+extends layout
+block content
+    html
+        body
+            header
+                span#dummy
+                h1 Basic Pomodoro Timer
+                p
+                    | A Pomodoro clock is based on the Pomodoro theory of productivity, where 25 minutes of work is balanced by a following 5 minutes of rest. After the fourth interval of 25 minutes, a 15 minute break is taken. As it stands, this timer measures the 25 minute work period.
+                br
+                link(href='http://fonts.googleapis.com/css?family=VT323', rel='stylesheet', type='text/css')
+                .clockWrapper2
+                    .clockWrapper
+                        .minuteClock.clock
+                            span#minuteTimer 25:
+                        .secondClock.clock
+                            span#secondTimer 00
+                br
+                button.startButton Get to work!

@@ -1,0 +1,25 @@
+
+body{
+    content-align: center;
+    text-align: center;
+    font-family: 'Kurale', serif;
+    background-size: cover;
+}
+div{
+    display: inline;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+
+}
+p{
+    background-color: rgba(100,150,150,.7);
+    font-size: 2em;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.info {
+    font-size: 3em;
+    background: rgba(130,160,160, .5);
+}

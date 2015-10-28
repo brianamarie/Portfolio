@@ -1,0 +1,97 @@
+extends layout
+
+block content
+  body
+    .my-fluid-container
+      .row
+        .col-md-12
+          nav.hidden-xs.navbar.navbar-inverse(role='navigation')
+            .col-md-12
+              .navbar-header
+                a.navbar-brand(href='#') Briana Swift
+              ul.nav.navbar-nav.navbar-right
+                li
+                  a(href='#aboutMe') About
+                li
+                  a(href='#port') Portfolio
+                li
+                  a(href='#contact') Contact
+      .row.text-center.cover.background
+        .div(class='class=', col-xs-6='', col-md-4='').cloudy
+          h1 						Briana Swift
+          h3
+            | Teacher, developer, life-lover.
+          br
+          .row
+            .col-md-3
+              a.btn.btn-block(href='https://twitter.com/brianamarie132', target='_blank') Twitter
+            .col-md-3
+              a.btn.btn-block(href='https://www.youtube.com/playlist?list=PLWKjhJtqVAbmfoj2Th9fvxhHIeqFO7wOy', target='_blank') YouTube
+            .col-md-3
+              a.btn.btn-block(href='http://www.freecodecamp.com/brianamarie', target='_blank') Free Code Camp
+            .col-md-3
+              a.btn.btn-block(href='https://github.com/brianamarie', target='_blank') GitHub
+      .row.info.background
+        .col-xs-12.col-sm-6.col-lg-8.cloudy
+          a(name='aboutMe')
+          h2 						About Me
+          p
+            | I am a self-taught developer still finding my place in the stack. Passionate about the future of web development and curious about exploring 3D printing, I am constantly seeking out new ways to create with code.
+          br
+          p
+            | You can find my current balance of education and programming on
+            a(href='https://www.youtube.com/playlist?list=PLWKjhJtqVAbmfoj2Th9fvxhHIeqFO7wOy', target='_blank') my playlist
+            |  via Free Code Camp's YouTube.
+            a(target='_blank', href='http://ctt.ec/cKd_9') Tweet at me
+            |         with suggestions for more videos!
+        .col-xs-6.col-lg-4
+          img.img-responsive.img-rounded.img-center(src='https://qph.is.quoracdn.net/main-qimg-d3c651ebca56d4c3cfbbebd736674f1d?convert_to_webp=true')
+      .row.portfolio.background
+        .cloudy
+          a(name='port')
+          h2 						Portfolio
+          p
+            | Check out some of my recent projects.
+          br
+          a(href='/quotegen') Random Quote Generator
+          br
+          a(href='/wikiview') Wikipedia Viewer
+          br
+          a(href='/weather') Weather App
+          br
+          a(href='/twitch') Twitch Viewer
+          br
+          a(href='/pomodoro') Pomodoro Timer
+          br
+          a(href='/calculator') Calculator
+          br
+          a(href='/tictactoe') Tic Tac Toe (You'll probably win.)
+        .row
+          .col-xs-6.col-md-4.feature
+            iframe.img-responsive(src='/quotegen', title='Random Quote Generator', name='ranQuoGen')
+          .col-xs-6.col-md-4.feature
+            iframe.img-responsive(src='/wikiview', title='Wikipedia Viewer')
+          .col-xs-6.col-md-4.feature
+            iframe.img-responsive(src='/weather', title='Current Weather App')
+        .row
+          .col-xs-6.col-md-4.feature
+            iframe.img-responsive(src='/twitch', title='Twitch Streaming API')
+          .col-xs-6.col-md-4.feature
+            iframe.img-responsive(src='/pomodoro', title='Pomodoro Timer')
+          .col-xs-6.col-md-4.feature
+            iframe.img-responsive(src='/calculator', title='JavaScript Calculator')
+        .row
+          .col-xs-6.col-md-4.feature
+            iframe.img-responsive(src='/tictactoe', title='Tic Tac Toe')
+      .row.contact.background.text-center
+        .cloudy
+          a(name='contact')
+          h2 Contact me
+          .row
+            .col-md-3
+              a.btn.btn-block(href='https://twitter.com/brianamarie132', target='_blank') Twitter
+            .col-md-3
+              a.btn.btn-block(href='https://www.youtube.com/playlist?list=PLWKjhJtqVAbmfoj2Th9fvxhHIeqFO7wOy', target='_blank') YouTube
+            .col-md-3
+              a.btn.btn-block(href='https://www.youtube.com/playlist?list=PLWKjhJtqVAbmfoj2Th9fvxhHIeqFO7wOy', target='_blank') YouTube
+

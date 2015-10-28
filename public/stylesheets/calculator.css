@@ -1,0 +1,32 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+*
+.screen {
+    background-color: grey;
+    padding: 5px 5px 5px 5px;
+    margin: 0 auto;
+    color: black;
+    font-size: 2em;
+    width: 400px;
+}
+
+.touchButtons {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 4px solid grey;
+}
+
+.numberButtons {
+    font-size: 2em;
+    width: 3em;
+    color: rgb(100,100,100);
+}
+
+.social {
+    font-family: font-awesome;
+}

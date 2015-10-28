@@ -1,0 +1,26 @@
+
+h1 {
+    padding: 3px;
+}
+
+.square {
+    background-color: rgb(100, 200, 150);
+    height: 8em;
+    font-size: 1.5em;
+}
+
+.top {
+    border-bottom: 2px solid black;
+}
+
+.bottom {
+    border-top: 2px solid black;
+}
+
+.left {
+    border-right: 2px solid black;
+}
+
+.right {
+    border-left: 2px solid black;
+}

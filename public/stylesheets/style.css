@@ -1,0 +1,71 @@
+body {
+  font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+.my-fluid-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+.background {
+  background-attachment: fixed;
+  padding: 15% 10% 20% 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.cloudy {
+  background-color: rgba(110, 110, 110, 0.7);
+  color: white;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+a:visited {
+  color: white;
+}
+
+a {
+  color: white;
+  margin: 2px;
+  background: rgba(55,55,55,0.8);
+}
+h1 {
+  font-size: 5em;
+}
+.img-center{
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid white;
+
+}
+.cover {
+  background-image: url("http://ums.aadl.org/files/photos/ums_photos_00118.jpg");
+  height: 45em;
+  margin-top: -10em;
+}
+
+.info {
+  background-image: url("http://aaronlindberg.com/wp-content/uploads/2014/07/KansasCityArchitecturalPhotographer_02-1024x682.jpg");
+}
+
+.portfolio {
+  background-image: url("https://img1.etsystatic.com/054/0/9038119/il_fullxfull.723580211_8o8w.jpg");
+}
+
+.feature {
+  padding: 12px;
+}
+
+.contact {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b5/Liberty_Memorial_By_Night.jpg");
+}

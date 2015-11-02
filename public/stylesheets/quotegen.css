@@ -2,7 +2,6 @@ button {
     background-color: #C2B8B2;
     color: #204B57;
     margin: 0 auto;
-    font-size: 1em;
     width: 8%;
     padding: 2px;
     border: 2px solid #204B57;
@@ -14,13 +13,22 @@ div{
     background-color: #C2B8B2;
     color: #204B57;
     margin: 0 auto;
-    width: 50%;
     padding: 20px;
     border: 2px solid #204B57;
     box-shadow:  5px 5px 5px black;
 }
-body{
+
+p{
+    font-family: 'Patua One', cursive;
+    font-size: 1em;
+}
+
+.body{
     background-color: #8A716A;
+}
+.title{
+    font-family: 'Niconne', cursive;
+    font-size: 5em;
 }
 .append{
     font-family: 'Patua One', cursive;
@@ -31,4 +39,8 @@ body{
     font-family: 'Niconne', cursive;
     font-size: 1.7em;
     padding: 5px;
+}
+
+.viewCode{
+    width: 20%;
 }

@@ -13,14 +13,21 @@ html
       script(src="https://fb.me/react-0.13.3.js")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
    block content
-      body
-         div
+      body(class='body')
+         br
+         h1(class='title text-center') Quote Generator
+         br
+         p(class='text-center') This quote generator was created as a zipline for Free Code Camp. The hand-picked quotes are some of my personal favorites.
+         br
+         div(class='container')
             p.append(align='center')
             br
             p.author
          br
          form(align='center')
             button(onclick='history.go(0)')  More
+
+
          // <a href="https://twitter.com/share" class="twitter-share-button" data-via="brianamarie132" data-related="freecodecamp" data-hashtags="learntocode">Tweet</a>!
          script.
             //array of objects, quotes with keys of id:, quote:, & author:
@@ -219,6 +226,7 @@ html
             $(document).ready(
                     $('.author').append("-").append(quotes[current1].author.toString())
             );
+
             //twitter code
             !function (d, s, id) {
                var js, fjs = d.getElementsByTagName(s)[0],

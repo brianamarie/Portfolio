@@ -1,7 +1,11 @@
 
 body{
     font-family: 'Kurale', serif;
+    background-attachment: fixed;
+    padding: 15% 10% 20% 10%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 .shade{

@@ -15,16 +15,19 @@ html
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     block content
-    body
+    body.body
         .container.text-center
             .row
                 .col-xs-12
-                    h1.md-display-4 Twitch Streamers
+                    h1.md-display-2 Twitch Streamers
             .row
-                .online.col-xs-5.well.md-body-1
+                .col-xs-5.well.md-body-1
                     h1.md-display-3  ONLINE
-                .offline.col-xs-5.well.md-body-1
+                    h4.streamName
+                    p.streamInfo
+                .col-xs-5.well.md-body-1
                     h1.md-display-3 OFFLINE
+                    h4.offline
         script.
             /**
              * Created by Briana on 10/27/15.
@@ -38,13 +41,12 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
                     $('.all').append();
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.twitch.tv/medrybw">medrybw</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/medrybw">medrybw</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/medrybw">medrybw</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
@@ -58,13 +60,12 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
                     $('.all').append("<p>Free Code Camp</p>");
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.twitch.tv/freecodecamp">Free Code Camp</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/freecodecamp">Free Code Camp</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/freecodecamp">Free Code Camp</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
@@ -78,13 +79,12 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
                     $('.all').append("<p>storbeck</p>");
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.twitch.tv/storbeck">storbeck</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/storbeck">storbeck</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/storbeck">storbeck</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
@@ -98,13 +98,12 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
                     $('.all').append('<p><a href = "http://www.twitch.tv/terakilobyte">terakilobyte</a></p>');
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.twitch.tv/terakilobyte">terakilobyte</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/terakilobyte">terakilobyte</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/terakilobyte">terakilobyte</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
@@ -118,13 +117,12 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
                     $('.all').append("<p>piecedigital</p>");
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.twitch.tv/piecedigital">piecedigital</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/piecedigital">piecedigital</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/piecedigital">piecedigital</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
@@ -138,13 +136,12 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
                     $('.all').append("<p>habathcx</p>");
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.twitch.tv/habathcx">habathcx</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/habathcx">habathcx</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/habathcx">habathcx</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
@@ -158,53 +155,12 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
                     $('.all').append("<p>RobotCaleb</p>");
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.twitch.tv/robotcaleb">RobotCaleb</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/robotcaleb">RobotCaleb</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
-                    }
-                }
-            });
-            //comster404
-            jQuery.ajax({
-                url: "https://api.twitch.tv/kraken/streams/comster404",
-                jsonp: "callback",
-                dataType: "jsonp",
-                data: {
-                    q: "select 	title,abstract,url from search.news where query=\"\"",
-                    format: "json"
-                },
-                success: function (response) {
-                    console.log(response);
-                    $('.all').append("<p>comster404</p>");
-                    if (response.stream == null) {
-                        $('.offline').append('<p><a href = "http://www.twitch.tv/comster404">comster404</a></p>');
-                    } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/comster404">comster404</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
-                    }
-                }
-            });
-            //brunofinn
-            jQuery.ajax({
-                url: "https://api.twitch.tv/kraken/streams/brunofinn",
-                jsonp: "callback",
-                dataType: "jsonp",
-                data: {
-                    q: "select 	title,abstract,url from search.news where query=\"\"",
-                    format: "json"
-                },
-                success: function (response) {
-                    console.log(response);
-                    $('.all').append("<p>brunofinn</p>");
-                    if (response.stream == null) {
-                        $('.offline').append('<p><a href = "http://www.twitch.tv/brunofinn">brunofinn</a></p>');
-                    } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/brunofinn">brunofinn</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/robotcaleb">RobotCaleb</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
@@ -218,19 +174,18 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
                     $('.all').append("<p>thomasballinger</p>");
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.twitch.tv/thomasballinger">thomasballinger</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/thomasballinger">thomasballinger</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/thomasballinger">thomasballinger</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
-            //noobs2ninjas
+            //brianamarie
             jQuery.ajax({
-                url: "https://api.twitch.tv/kraken/streams/noobs2ninjas",
+                url: "https://api.twitch.tv/kraken/streams/brianamarie",
                 jsonp: "callback",
                 dataType: "jsonp",
                 data: {
@@ -238,34 +193,14 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    console.log(response);
-                    $('.all').append("<p>noobs2ninjas</p>");
+                    $('.all').append("<p>brianamarie</p>");
                     if (response.stream == null) {
-                        $('.offline').append('<p><a href = "http://www.twitch.tv/noobs2ninjas">noobs2ninjas</a></p>');
+                        $('.offline').append('<p><a href = "http://www.twitch.tv/brianamarie">brianamarie</a></p>');
                     } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/noobs2ninjas">noobs2ninjas</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
+                        $('.streamName').append('<p><a href = "http://www.twitch.tv/brianamarie">brianamarie</a></p>');
+                        $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
-            //beohoff
-            jQuery.ajax({
-                url: "https://api.twitch.tv/kraken/streams/beohoff",
-                jsonp: "callback",
-                dataType: "jsonp",
-                data: {
-                    q: "select 	title,abstract,url from search.news where query=\"\"",
-                    format: "json"
-                },
-                success: function (response) {
-                    console.log(response);
-                    $('.all').append("<p>beohoff</p>");
-                    if (response.stream == null) {
-                        $('.offline').append('<p><a href = "http://www.twitch.tv/beohoff">beohoff</a></p>');
-                    } else {
-                        $('.online').append('<p><a href = "http://www.twitch.tv/beohoff">beohoff</a></p>');
-                        $('.online').append(response.stream.channel.status.toString());
-                    }
-                }
-            });
+
 

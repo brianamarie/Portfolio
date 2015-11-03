@@ -11,24 +11,19 @@ html
       meta(name="viewport", content="width=device-width, initial-scale=1")
       link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
-      link(href='http://fonts.googleapis.com/css?family=Patua+One', rel='stylesheet', type='text/css')
-      link(href='http://fonts.googleapis.com/css?family=Niconne', rel='stylesheet', type='text/css')
       script(src="https://fb.me/react-0.13.3.js")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
    block content
       body
-         link(href='http://fonts.googleapis.com/css?family=Kurale', rel='stylesheet', type='text/css')
-         p
-            | Location
          br
-         p.response.info
-         p
-            | Weather
-         p.temp.info
-         br
-         p.rain.info
-         br
-         p.wind.info
+         div(class="container text-center shade")
+            h1.response
+            br
+            h2.temp
+            br
+            h3.rain
+            br
+            h3.wind
    script.
       var city = "";
       var zip = "";
@@ -43,7 +38,6 @@ html
             format: "json"
          },
          success: function (response) {
-            console.log(response);
             city = response.city.toString();
             zip = response.postal.toString();
             $('.response').append(city + ", " + zip);
@@ -57,7 +51,6 @@ html
                   format: "json"
                },
                success: function (response) {
-                  console.log(response);
                   state = response.location.state.toString();
                   var weatherAPI = ("http://api.wunderground.com/api/75fccdfe0b1075c9/conditions/q/" + state + "/" + city + ".json");
                   jQuery.ajax({
@@ -69,7 +62,6 @@ html
                         format: "json"
                      },
                      success: function (response) {
-                        console.log(response);
                         $('.temp').append(response.current_observation.temp_f.toString() + "&#176;f");
                         var temp = response.current_observation.temp_f;
                         $('.rain').append(response.current_observation.precip_1hr_in.toString() + '" of precipitation this hour');

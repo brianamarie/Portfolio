@@ -15,19 +15,20 @@ html
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     block content
-    body.body
+    body.background
         .container.text-center
             .row
-                .col-xs-12
-                    h1.md-display-2 Twitch Streamers
+                h1.md-display-2 Twitch Streamers
             .row
-                .col-xs-5.well.md-body-1
-                    h1.md-display-3  ONLINE
-                    h4.streamName
-                    p.streamInfo
-                .col-xs-5.well.md-body-1
-                    h1.md-display-3 OFFLINE
-                    h4.offline
+                .col-md-6
+                    .well.md-body-6
+                        h1.md-display-3  ONLINE
+                        h4.streamName
+                        p.streamInfo
+                .col-md-6
+                    .well.md-body-6
+                        h1.md-display-3 OFFLINE
+                        h4.offline
         script.
             /**
              * Created by Briana on 10/27/15.

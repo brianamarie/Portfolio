@@ -1,32 +1,14 @@
 header {
-    text-align: center;
     font-family: 'VT323';
 }
-body {
-    background: white;
-}
-
-p {
-    width: 50%;
-    margin: 0 auto;
-    padding: 15px;
-    border: 5px solid black;
-    border-radius: 10px;
-}
-
 .clockWrapper2 {
     border: 10px solid #663300;
     border-radius: 10px;
-    width: 25%;
-    margin: 0 auto;
-    text-align: center;
-    content-align: center;
     background-color: #663300;
 }
 
 .clockWrapper {
     content-align: center;
-    width: 90%;
     margin: 0 auto;
     border: 10px solid black;
     border-radius: 10px;

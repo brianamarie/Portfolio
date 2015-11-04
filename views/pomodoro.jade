@@ -5,27 +5,30 @@ html
    head
       title= title
       link(rel='stylesheet', href='/stylesheets/pomodoro.css')
+      link(href='http://fonts.googleapis.com/css?family=VT323', rel='stylesheet', type='text/css')
       meta(name="viewport", content="width=device-width, initial-scale=1")
       link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
       script(src="https://fb.me/react-0.13.3.js")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
    block content
-      html
-         body
-            header
+      body
+         .container
+            header.text-center
                span#dummy
                h1 Basic Pomodoro Timer
-               p
-                  | A Pomodoro clock is based on the Pomodoro theory of productivity, where 25 minutes of work is balanced by a following 5 minutes of rest. After the fourth interval of 25 minutes, a 15 minute break is taken. As it stands, this timer measures the 25 minute work period.
+               .row
+                  .col-md-6
+                  h4 A Pomodoro clock is based on the Pomodoro theory of productivity, where 25 minutes of work is balanced by a following 5 minutes of rest. After the fourth interval of 25 minutes, a 15 minute break is taken. As it stands, this timer measures the 25 minute work period.
                br
-               link(href='http://fonts.googleapis.com/css?family=VT323', rel='stylesheet', type='text/css')
-               .clockWrapper2
-                  .clockWrapper
-                     .minuteClock.clock
-                        span#minuteTimer 25:
-                     .secondClock.clock
-                        span#secondTimer 00
+               .row
+                  .clockWrapper2.col-md-12
+                     .clockWrapper
+                        .row
+                           .minuteClock.clock
+                              h1#minuteTimer 25:
+                           .secondClock.clock
+                              h1#secondTimer 00
                br
                button.startButton Get to work!
    script.

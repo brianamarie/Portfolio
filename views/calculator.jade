@@ -22,77 +22,64 @@ html
             .text-center
                 h1 JavaScript Calculator
                 br
-                .container.touchButtons
-                    .screen.text-right 0
+                .container.background
+                    .row
+                        .col-md-12
+                            h3.screen.text-right 0
                     br
                     .row
-                        button#1.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 1
-                        button#2.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 2
-                        button#3.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 3
-                        button#C.numberButtons
-                            .col-xs-3.col-sm-3
-                                | C
+                        .col-xs-3
+                            h3#1.numberButtons 1
+                        .col-xs-3
+                            h3#2.numberButtons 2
+                        .col-xs-3
+                            h3#3.numberButtons 3
+                        .col-xs-3
+                            h3#C.numberButtons C
                     .row
-                        button#4.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 4
-                        button#5.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 5
-                        button#6.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 6
-                        button#add.numberButtons
-                            .col-xs-3.col-sm-3
-                                | +
+                        .col-xs-3
+                            h3#4.numberButtons 4
+                        .col-xs-3
+                            h3#5.numberButtons 5
+                        .col-xs-3
+                            h3#6.numberButtons 6
+                        .col-xs-3
+                            h3#add.numberButtons +
                     .row
-                        button#7.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 7
-                        button#8.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 8
-                        button#9.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 9
-                        button#subtract.numberButtons
-                            .col-xs-3.col-sm-3
-                                | -
+                        .col-xs-3
+                            h3#7.numberButtons 7
+                        .col-xs-3
+                            h3#8.numberButtons 8
+                        .col-xs-3
+                            h3#9.numberButtons 9
+                        .col-xs-3
+                            h3#subtract.numberButtons -
                     .row
-                        button#0.numberButtons
-                            .col-xs-3.col-sm-3
-                                | 0
-                        button#equal.numberButtons
-                            .col-xs-3.col-sm-3
-                                | =
-                        button#divide.numberButtons
-                            .col-xs-3.col-sm-3
-                                | /
-                        button#multiply.numberButtons
-                            .col-xs-3.col-sm-3
-                                | x
+                        .col-xs-3
+                            h3#0.numberButtons 0
+                        .col-xs-3
+                            h3#equal.numberButtons =
+                        .col-xs-3
+                            h3#divide.numberButtons /
+                        .col-xs-3
+                            h3#multiply.numberButtons x
                     .row
-                        button#decimal.numberButtons
-                            .col-xs-3.col-sm-3
-                                | .
-                        a(href='http://www.twitter.com/brianamarie132', target='_blank')
-                            button.numberButtons.social
-                                .col-xs-3.col-sm-3
-                                    i.fontawesome-.fa-twitter
-                        a(href='http://www.freecodecamp.com/brianamarie', target='_blank')
-                            button.numberButtons
-                                .col-xs-3.col-sm-3
-                                    | fcc
-                        a(href='https://www.youtube.com/playlist?list=PLWKjhJtqVAbmfoj2Th9fvxhHIeqFO7wOy', target='_blank')
-                            button.numberButtons.social
-                                .col-xs-3.col-sm-3
-                                    i.fontawesome-.fa-youtube
+                        .col-xs-3
+                            h3#decimal.numberButtons .
+                        .col-xs-3
+                            h3
+                                a(href='http://www.twitter.com/brianamarie132', target='_blank')
+                                    .numberButtons.social
+                                        i.fontawesome-.fa-twitter
+                        .col-xs-3
+                            h3
+                                a(href='http://www.freecodecamp.com/brianamarie', target='_blank').h3
+                                    .numberButtons fcc
+                        .col-xs-3
+                            h3
+                                a(href='https://www.youtube.com/playlist?list=PLWKjhJtqVAbmfoj2Th9fvxhHIeqFO7wOy', target='_blank').h3
+                                    .numberButtons.social
+                                        i.fontawesome-.fa-youtube
                     br
 
     script.

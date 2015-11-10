@@ -34,6 +34,9 @@ html
                div#7.bottom.left.square.col-xs-4
                div#8.bottom.square.col-xs-4
                div#9.bottom.right.square.col-xs-4
+         .container
+            .row
+               h2#newGame.hover.col-xs-12 New Game
       script.
          /**
           * Created by Briana on 10/27/15.
@@ -48,7 +51,66 @@ html
             user = "o";
             comp = "x";
          });
+
          var optionBox = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+         function checkWin(){
+            if ($("#1").html() === $("#2").html() &&
+                $("#1").html() === $("#3").html() &&
+                $("#1").html().length > 0){
+               $("#1").css('color', 'red');
+               $("#2").css('color', 'red');
+               $("#3").css('color', 'red');
+            }
+            if ($("#4").html() === $("#5").html() &&
+                    $("#4").html() === $("#6").html() &&
+                    $("#4").html().length > 0) {
+               $("#4").css('color', 'red');
+               $("#5").css('color', 'red');
+               $("#6").css('color', 'red');
+            }
+            if ($("#7").html() === $("#8").html() &&
+                    $("#7").html() === $("#9").html() &&
+                    $("#7").html().length > 0) {
+               $("#7").css('color', 'red');
+               $("#8").css('color', 'red');
+               $("#9").css('color', 'red');
+            }
+            if ($("#1").html() === $("#4").html() &&
+                    $("#1").html() === $("#7").html() &&
+                    $("#1").html().length > 0) {
+               $("#1").css('color', 'red');
+               $("#4").css('color', 'red');
+               $("#7").css('color', 'red');
+            }
+            if ($("#2").html() === $("#5").html() &&
+                    $("#2").html() === $("#8").html() &&
+                    $("#2").html().length > 0) {
+               $("#2").css('color', 'red');
+               $("#5").css('color', 'red');
+               $("#8").css('color', 'red');
+            }
+            if ($("#3").html() === $("#6").html() &&
+                    $("#3").html() === $("#9").html() &&
+                    $("#3").html().length > 0) {
+               $("#3").css('color', 'red');
+               $("#6").css('color', 'red');
+               $("#9").css('color', 'red');
+            }
+            if ($("#1").html() === $("#5").html() &&
+                    $("#1").html() === $("#9").html() &&
+                    $("#1").html().length > 0) {
+               $("#1").css('color', 'red');
+               $("#5").css('color', 'red');
+               $("#9").css('color', 'red');
+            }
+            if ($("#3").html() === $("#5").html() &&
+                    $("#3").html() === $("#7").html() &&
+                    $("#3").html().length > 0) {
+               $("#3").css('color', 'red');
+               $("#5").css('color', 'red');
+               $("#7").css('color', 'red');
+            }
+         }
          $("#1").click(function () {
             //users choice appearing
             $(this).html(user);
@@ -67,6 +129,7 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
          $("#2").click(function () {
             //users choice appearing
@@ -86,6 +149,7 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
          $("#3").click(function () {
             //users choice appearing
@@ -105,6 +169,7 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
          $("#4").click(function () {
             //users choice appearing
@@ -124,6 +189,7 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
          $("#5").click(function () {
             //users choice appearing
@@ -143,6 +209,7 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
          $("#6").click(function () {
             //users choice appearing
@@ -162,6 +229,7 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
          $("#7").click(function () {
             //users choice appearing
@@ -181,6 +249,7 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
          $("#8").click(function () {
             //users choice appearing
@@ -200,6 +269,7 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
          $("#9").click(function () {
             //users choice appearing
@@ -219,4 +289,25 @@ html
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+            checkWin();
          })
+         $("#newGame").click(function () {
+            optionBox = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            console.log(optionBox);
+            $('.square').empty();
+            $("#1").css('color', 'black');
+            $("#2").css('color', 'black');
+            $("#3").css('color', 'black');
+            $("#4").css('color', 'black');
+            $("#5").css('color', 'black');
+            $("#6").css('color', 'black');
+            $("#7").css('color', 'black');
+            $("#8").css('color', 'black');
+            $("#9").css('color', 'black');
+         })
+
+
+
+
+         //if user picks corner for first choice, comp goes to middle
+         //if user picks center for first choice, comp picks corner

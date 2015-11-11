@@ -53,51 +53,99 @@ html
          });
 
          var optionBox = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+         var choice = undefined;
+         var randomNumber = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
+
          function dangerZone(){
-            if ($("#1").html() === $("#2").html() &&
-                    $("#1").html().length > 0){
+            randomNumber = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
+            if (($("#1").hasClass("user") && $("#2").hasClass("user")) ||
+                    (($("#1").hasClass("comp") && $("#2").hasClass("comp")))){
+               console.log("oneDZ");
                return 3;
-            } else if ($("#1").html() === $("#3").html() &&
-                    $("#1").html().length > 0){
+            } else if (($("#1").hasClass("user") && $("#3").hasClass("user")) ||
+                    (($("#1").hasClass("comp") && $("#3").hasClass("comp")))){
+               console.log("twoDZ");
                return 2;
-            } else if ($("#4").html() === $("#5").html() &&
-                    $("#4").html().length > 0){
+            } else if (($("#3").hasClass("user") && $("#2").hasClass("user")) ||
+                    (($("#3").hasClass("comp") && $("#2").hasClass("comp")))){
+               console.log("threeDZ");
+               return 1;
+            } else if (($("#4").hasClass("user") && $("#5").hasClass("user")) ||
+                    (($("#4").hasClass("comp") && $("#5").hasClass("comp")))){
+               console.log("fourDZ");
                return 6;
-            } else if ($("#4").html() === $("#6").html() &&
-                    $("#4").html().length > 0){
+            } else if (($("#4").hasClass("user") && $("#6").hasClass("user")) ||
+                    (($("#4").hasClass("comp") && $("#6").hasClass("comp")))){
+               console.log("fiveDZ");
                return 5;
-            } else if ($("#7").html() === $("#8").html() &&
-                    $("#7").html().length > 0){
-               return 9;
-            } else if ($("#7").html() === $("#9").html() &&
-                    $("#7").html().length > 0){
-               return 8;
-            } else if ($("#1").html() === $("#4").html() &&
-                    $("#1").html().length > 0){
-               return 7;
-            } else if ($("#1").html() === $("#7").html() &&
-                    $("#1").html().length > 0){
+            } else if (($("#5").hasClass("user") && $("#6").hasClass("user")) ||
+                    (($("#5").hasClass("comp") && $("#6").hasClass("comp")))){
+               console.log("sixDZ");
                return 4;
-            } else if ($("#2").html() === $("#5").html() &&
-                    $("#2").html().length > 0){
+            } else if (($("#7").hasClass("user") && $("#8").hasClass("user")) ||
+                    (($("#7").hasClass("comp") && $("#8").hasClass("comp")))){
+               console.log("sevenDZ");
+               return 9;
+            } else if (($("#7").hasClass("user") && $("#9").hasClass("user")) ||
+                    (($("#7").hasClass("comp") && $("#9").hasClass("comp")))){
+               console.log("eightDZ");
                return 8;
-            } else if ($("#2").html() === $("#8").html() &&
-                    $("#2").html().length > 0){
+            } else if (($("#8").hasClass("user") && $("#9").hasClass("user")) ||
+                    (($("#8").hasClass("comp") && $("#9").hasClass("comp")))){
+               console.log("nineDZ");
+               return 7;
+            } else if (($("#1").hasClass("user") && $("#4").hasClass("user")) ||
+                    (($("#1").hasClass("comp") && $("#4").hasClass("comp")))){
+               console.log("tenDZ");
+               return 7;
+            } else if (($("#1").hasClass("user") && $("#7").hasClass("user")) ||
+                    (($("#1").hasClass("comp") && $("#7").hasClass("comp")))){
+               console.log("elevenDZ");
+               return 4;
+            } else if (($("#4").hasClass("user") && $("#7").hasClass("user")) ||
+                    (($("#4").hasClass("comp") && $("#7").hasClass("comp")))){
+               console.log("twelveDZ");
+               return 1;
+            } else if (($("#2").hasClass("user") && $("#5").hasClass("user")) ||
+                    (($("#2").hasClass("comp") && $("#5").hasClass("comp")))){
+               console.log("thirteenDZ");
+               return 8;
+            } else if (($("#8").hasClass("user") && $("#2").hasClass("user")) ||
+                    (($("#8").hasClass("comp") && $("#2").hasClass("comp")))){
+               console.log("fourteenDZ");
                return 5;
-            } else if ($("#3").html() === $("#6").html() &&
-                    $("#3").html().length > 0){
+            } else if (($("#5").hasClass("user") && $("#8").hasClass("user")) ||
+                    (($("#5").hasClass("comp") && $("#8").hasClass("comp")))){
+               console.log("fifteenDZ");
+               return 2;
+            } else if (($("#3").hasClass("user") && $("#6").hasClass("user")) ||
+                    (($("#3").hasClass("comp") && $("#6").hasClass("comp")))){
+               console.log("sixteenDZ");
                return 9;
-            } else if ($("#3").html() === $("#9").html() &&
-                    $("#3").html().length > 0){
+            } else if (($("#3").hasClass("user") && $("#9").hasClass("user")) ||
+                    (($("#3").hasClass("comp") && $("#9").hasClass("comp")))){
+               console.log("seventeenDZ");
                return 6;
-            } else if ($("#1").html() === $("#5").html() &&
-                    $("#1").html().length > 0){
+            } else if (($("#6").hasClass("user") && $("#9").hasClass("user")) ||
+                    (($("#6").hasClass("comp") && $("#9").hasClass("comp")))){
+               console.log("eighteenDZ");
+               return 3;
+            } else if (($("#5").hasClass("user") && $("#1").hasClass("user")) ||
+                    (($("#5").hasClass("comp") && $("#1").hasClass("comp")))){
+               console.log("nineteenDZ");
                return 9;
-            } else if ($("#1").html() === $("#9").html() &&
-                    $("#1").html().length > 0){
+            } else if (($("#1").hasClass("user") && $("#9").hasClass("user")) ||
+                    (($("#1").hasClass("comp") && $("#9").hasClass("comp")))){
+               console.log("twentyDZ");
                return 5;
+            } else if (($("#5").hasClass("user") && $("#9").hasClass("user")) ||
+                    (($("#5").hasClass("comp") && $("#9").hasClass("comp")))){
+               console.log("twentyoneDZ");
+               return 1;
             } else {
-               return undefined;
+               console.log("twentytwoDZ");
+               return randomNumber;
             }
          }
          function checkWin(){
@@ -158,245 +206,133 @@ html
                $("#7").css('color', 'red');
             }
          }
-         $("#1").click(function () {
-            //users choice appearing
-            $(this).html(user);
-            var index = optionBox.indexOf(1);
-            console.log(index);
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
+
+         function compResponse(){
+            console.log(optionBox);
             if (optionBox.indexOf(5) >= 0){
                randomChoice = 5;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
+               console.log("nobody clicked center");
+            } else if ((optionBox.indexOf(5) === -1) &&
+                            optionBox.length === 8){
+               randomChoice = 1;
+               console.log("first click in center");
             } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
+               randomChoice = dangerZone();
+               console.log(randomChoice + "is the choice from DZ");
             }
             var workingID = "#" + randomChoice.toString();
             $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
+            $(workingID).addClass("comp");
+            var index = optionBox.indexOf(randomChoice);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
             console.log(optionBox);
+         }
+
+         $("#1").click(function () {
+            $(this).html(user);
+            $("#1").addClass("user");
+            var index = optionBox.indexOf(1);
+            if (index > -1) {
+               optionBox.splice(index, 1);
+            }
+            compResponse();
             checkWin();
          })
          $("#2").click(function () {
-            //users choice appearing
             $(this).html(user);
+            $("#2").addClass("user");
             var index = optionBox.indexOf(2);
-            console.log(index);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
-            console.log(optionBox);
-            //computer choice being made and appearing
-            if (optionBox.indexOf(5) >= 0){
-               randomChoice = 5;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
-            } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            }
-            var workingID = "#" + randomChoice.toString();
-            $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
-            console.log(optionBox);
+            compResponse();
             checkWin();
          })
          $("#3").click(function () {
-            //users choice appearing
             $(this).html(user);
+            $("#3").addClass("user");
             var index = optionBox.indexOf(3);
-            console.log(index);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
-            if (optionBox.indexOf(5) >= 0){
-               randomChoice = 5;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
-            } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            }
-            var workingID = "#" + randomChoice.toString();
-            $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
-            console.log(optionBox);
+            compResponse();
             checkWin();
          })
          $("#4").click(function () {
-            //users choice appearing
             $(this).html(user);
+            $("#4").addClass("user");
             var index = optionBox.indexOf(4);
-            console.log(index);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
-            if (optionBox.indexOf(5) >= 0){
-               randomChoice = 5;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
-            } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            }
-            var workingID = "#" + randomChoice.toString();
-            $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
-            console.log(optionBox);
+            compResponse();
             checkWin();
          })
          $("#5").click(function () {
-            //users choice appearing
             $(this).html(user);
+            $("#5").addClass("user");
             var index = optionBox.indexOf(5);
-            console.log(index);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
-            if (optionBox.indexOf(1) >= 0){
-               randomChoice = 1;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
-            } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            }
-            var workingID = "#" + randomChoice.toString();
-            $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
+            compResponse();
             checkWin();
          })
          $("#6").click(function () {
-            //users choice appearing
             $(this).html(user);
+            $("#6").addClass("user");
             var index = optionBox.indexOf(6);
-            console.log(index);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
-            if (optionBox.indexOf(5) >= 0){
-               randomChoice = 5;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
-            } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            }
-            var workingID = "#" + randomChoice.toString();
-            $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
-            console.log(optionBox);
+            compResponse();
             checkWin();
          })
          $("#7").click(function () {
-            //users choice appearing
             $(this).html(user);
+            $("#7").addClass("user");
             var index = optionBox.indexOf(7);
-            console.log(index);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
-            if (optionBox.indexOf(5) >= 0){
-               randomChoice = 5;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
-            } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            }
-            var workingID = "#" + randomChoice.toString();
-            $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
-            console.log(optionBox);
+            compResponse();
             checkWin();
          })
          $("#8").click(function () {
-            //users choice appearing
             $(this).html(user);
+            $("#8").addClass("user");
             var index = optionBox.indexOf(8);
-            console.log(index);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
-            if (optionBox.indexOf(5) >= 0){
-               randomChoice = 5;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
-            } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            }
-            var workingID = "#" + randomChoice.toString();
-            $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
-            console.log(optionBox);
+            compResponse();
             checkWin();
          })
          $("#9").click(function () {
-            //users choice appearing
             $(this).html(user);
+            $("#9").addClass("user");
             var index = optionBox.indexOf(9);
-            console.log(index);
             if (index > -1) {
                optionBox.splice(index, 1);
             }
-            if (optionBox.indexOf(5) >= 0){
-               randomChoice = 5;
-            } else if (dangerZone() !== undefined) {
-               randomChoice = dangerZone();
-            } else {
-               //computer choice being made and appearing
-               var randomChoice = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            }
-            var workingID = "#" + randomChoice.toString();
-            $(workingID).html(comp);
-            index = optionBox.indexOf(randomChoice)
-            if (index > -1) {
-               optionBox.splice(index, 1);
-            }
-            console.log(optionBox);
+            compResponse();
             checkWin();
          })
          $("#newGame").click(function () {
             optionBox = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             console.log(optionBox);
             $('.square').empty();
-            $("#1").css('color', 'black');
-            $("#2").css('color', 'black');
-            $("#3").css('color', 'black');
-            $("#4").css('color', 'black');
-            $("#5").css('color', 'black');
-            $("#6").css('color', 'black');
-            $("#7").css('color', 'black');
-            $("#8").css('color', 'black');
-            $("#9").css('color', 'black');
+            $("#1").css('color', 'black').removeClass("user", "comp");
+            $("#2").css('color', 'black').removeClass("user", "comp");
+            $("#3").css('color', 'black').removeClass("user", "comp");
+            $("#4").css('color', 'black').removeClass("user", "comp");
+            $("#5").css('color', 'black').removeClass("user", "comp");
+            $("#6").css('color', 'black').removeClass("user", "comp");
+            $("#7").css('color', 'black').removeClass("user", "comp");
+            $("#8").css('color', 'black').removeClass("user", "comp");
+            $("#9").css('color', 'black').removeClass("user", "comp");
          })
 
 

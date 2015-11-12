@@ -49,40 +49,37 @@ block content
       .row.portfolio.background
         .cloudy
           a(name='port')
-          h2 						Portfolio
-          p
-            | Check out some of my recent projects.
-          br
-          a(href='/quotegen') Random Quote Generator
-          br
-          a(href='/wikiview') Wikipedia Viewer
-          br
-          a(href='/weather') Weather App
-          br
-          a(href='/twitch') Twitch Viewer
-          br
-          a(href='/pomodoro') Pomodoro Timer
-          br
-          a(href='/calculator') Calculator
-          br
-          a(href='/tictactoe') Tic Tac Toe (You'll probably win.)
-        .row
-          .col-xs-6.col-md-4.feature
-            iframe.img-responsive(src='/quotegen', title='Random Quote Generator', name='ranQuoGen')
-          .col-xs-6.col-md-4.feature
-            iframe.img-responsive(src='/wikiview', title='Wikipedia Viewer')
-          .col-xs-6.col-md-4.feature
-            iframe.img-responsive(src='/weather', title='Current Weather App')
-        .row
-          .col-xs-6.col-md-4.feature
-            iframe.img-responsive(src='/twitch', title='Twitch Streaming API')
-          .col-xs-6.col-md-4.feature
-            iframe.img-responsive(src='/pomodoro', title='Pomodoro Timer')
-          .col-xs-6.col-md-4.feature
-            iframe.img-responsive(src='/calculator', title='JavaScript Calculator')
-        .row
-          .col-xs-6.col-md-4.feature
-            iframe.img-responsive(src='/tictactoe', title='Tic Tac Toe')
+          h2 Portfolio
+          p Check out some of my recent projects.
+        .container.text-center.cloudy
+          .row
+            a(href='/calculator') Calculator
+            .col-xs-12.embed-responsive.embed-responsive-16by9
+              iframe.img-responsive(src='/calculator', title='JavaScript Calculator')
+          .row
+            a(href='/tictactoe') Tic Tac Toe
+            .col-xs-12.embed-responsive.embed-responsive-16by9
+              iframe.img-responsive(src='/tictactoe', title='Tic Tac Toe')
+          .row
+            a(href='/quotegen') Random Quote Generator
+            .col-xs-12.embed-responsive.embed-responsive-16by9
+              iframe.embed-responsive-item.img-responsive(src='/quotegen', title='Random Quote Generator', name='ranQuoGen')
+          .row
+            a(href='/wikiview') Wikipedia Viewer
+            .col-xs-12.embed-responsive.embed-responsive-16by9
+              iframe.img-responsive(src='/wikiview', title='Wikipedia Viewer')
+          .row
+            a(href='/weather') Weather App
+            .col-xs-12.embed-responsive.embed-responsive-16by9
+              iframe.img-responsive(src='/weather', title='Current Weather App')
+          .row
+            a(href='/pomodoro') Pomodoro Timer
+            .col-xs-12.embed-responsive.embed-responsive-16by9
+              iframe.img-responsive(src='/pomodoro', title='Pomodoro Timer')
+          .row
+            a(href='/twitch') Twitch Viewer
+            .col-xs-12.embed-responsive.embed-responsive-16by9
+              iframe.img-responsive(src='/twitch', title='Twitch Streaming API')
       .row.contact.background.text-center
         .cloudy
           a(name='contact')

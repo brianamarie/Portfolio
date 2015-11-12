@@ -59,92 +59,104 @@ html
 
          function dangerZone(){
             randomNumber = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
-            if (($("#1").hasClass("user") && $("#2").hasClass("user")) ||
-                    (($("#1").hasClass("comp") && $("#2").hasClass("comp")))){
+            if (($("#1").hasClass("user") && $("#2").hasClass("user")) && !$("#3").hasClass("occupado") ||
+                    ($("#1").hasClass("comp") && $("#2").hasClass("comp") && !$("#3").hasClass("occupado"))){
                console.log("oneDZ");
                return 3;
-            } else if (($("#1").hasClass("user") && $("#3").hasClass("user")) ||
-                    (($("#1").hasClass("comp") && $("#3").hasClass("comp")))){
+            } else if (($("#1").hasClass("user") && $("#3").hasClass("user")) && !$("#2").hasClass("occupado") ||
+                    ($("#1").hasClass("comp") && $("#3").hasClass("comp") && !$("#2").hasClass("occupado"))){
                console.log("twoDZ");
                return 2;
-            } else if (($("#3").hasClass("user") && $("#2").hasClass("user")) ||
-                    (($("#3").hasClass("comp") && $("#2").hasClass("comp")))){
+            } else if (($("#3").hasClass("user") && $("#2").hasClass("user")) && !$("#1").hasClass("occupado") ||
+                    (($("#3").hasClass("comp") && $("#2").hasClass("comp") && !$("#1").hasClass("occupado")))){
                console.log("threeDZ");
                return 1;
-            } else if (($("#4").hasClass("user") && $("#5").hasClass("user")) ||
-                    (($("#4").hasClass("comp") && $("#5").hasClass("comp")))){
+            } else if (($("#4").hasClass("user") && $("#5").hasClass("user")) && !$("#6").hasClass("occupado") ||
+                    (($("#4").hasClass("comp") && $("#5").hasClass("comp") && !$("#6").hasClass("occupado")))){
                console.log("fourDZ");
                return 6;
-            } else if (($("#4").hasClass("user") && $("#6").hasClass("user")) ||
-                    (($("#4").hasClass("comp") && $("#6").hasClass("comp")))){
+            } else if (($("#4").hasClass("user") && $("#6").hasClass("user")) && !$("#5").hasClass("occupado") ||
+                    (($("#4").hasClass("comp") && $("#6").hasClass("comp") && !$("#5").hasClass("occupado")))){
                console.log("fiveDZ");
                return 5;
-            } else if (($("#5").hasClass("user") && $("#6").hasClass("user")) ||
-                    (($("#5").hasClass("comp") && $("#6").hasClass("comp")))){
+            } else if (($("#5").hasClass("user") && $("#6").hasClass("user")) && !$("#4").hasClass("occupado") ||
+                    (($("#5").hasClass("comp") && $("#6").hasClass("comp") && !$("#4").hasClass("occupado")))){
                console.log("sixDZ");
                return 4;
-            } else if (($("#7").hasClass("user") && $("#8").hasClass("user")) ||
-                    (($("#7").hasClass("comp") && $("#8").hasClass("comp")))){
+            } else if (($("#7").hasClass("user") && $("#8").hasClass("user")) && !$("#9").hasClass("occupado") ||
+                    (($("#7").hasClass("comp") && $("#8").hasClass("comp") && !$("#9").hasClass("occupado")))){
                console.log("sevenDZ");
                return 9;
-            } else if (($("#7").hasClass("user") && $("#9").hasClass("user")) ||
-                    (($("#7").hasClass("comp") && $("#9").hasClass("comp")))){
+            } else if (($("#7").hasClass("user") && $("#9").hasClass("user")) && !$("#8").hasClass("occupado") ||
+                    (($("#7").hasClass("comp") && $("#9").hasClass("comp") && !$("#8").hasClass("occupado")))){
                console.log("eightDZ");
                return 8;
-            } else if (($("#8").hasClass("user") && $("#9").hasClass("user")) ||
-                    (($("#8").hasClass("comp") && $("#9").hasClass("comp")))){
+            } else if (($("#8").hasClass("user") && $("#9").hasClass("user")) && !$("#7").hasClass("occupado") ||
+                    (($("#8").hasClass("comp") && $("#9").hasClass("comp") && !$("#7").hasClass("occupado")))){
                console.log("nineDZ");
                return 7;
-            } else if (($("#1").hasClass("user") && $("#4").hasClass("user")) ||
-                    (($("#1").hasClass("comp") && $("#4").hasClass("comp")))){
+            } else if (($("#1").hasClass("user") && $("#4").hasClass("user")) && !$("#7").hasClass("occupado") ||
+                    (($("#1").hasClass("comp") && $("#4").hasClass("comp") && !$("#7").hasClass("occupado")))){
                console.log("tenDZ");
                return 7;
-            } else if (($("#1").hasClass("user") && $("#7").hasClass("user")) ||
-                    (($("#1").hasClass("comp") && $("#7").hasClass("comp")))){
+            } else if (($("#1").hasClass("user") && $("#7").hasClass("user")) && !$("#4").hasClass("occupado") ||
+                    (($("#1").hasClass("comp") && $("#7").hasClass("comp") && !$("#4").hasClass("occupado")))){
                console.log("elevenDZ");
                return 4;
-            } else if (($("#4").hasClass("user") && $("#7").hasClass("user")) ||
-                    (($("#4").hasClass("comp") && $("#7").hasClass("comp")))){
+            } else if (($("#4").hasClass("user") && $("#7").hasClass("user")) && !$("#1").hasClass("occupado") ||
+                    (($("#4").hasClass("comp") && $("#7").hasClass("comp") && !$("#1").hasClass("occupado")))){
                console.log("twelveDZ");
                return 1;
-            } else if (($("#2").hasClass("user") && $("#5").hasClass("user")) ||
-                    (($("#2").hasClass("comp") && $("#5").hasClass("comp")))){
+            } else if (($("#2").hasClass("user") && $("#5").hasClass("user")) && !$("#8").hasClass("occupado") ||
+                    (($("#2").hasClass("comp") && $("#5").hasClass("comp") && !$("#8").hasClass("occupado")))){
                console.log("thirteenDZ");
                return 8;
-            } else if (($("#8").hasClass("user") && $("#2").hasClass("user")) ||
-                    (($("#8").hasClass("comp") && $("#2").hasClass("comp")))){
+            } else if (($("#8").hasClass("user") && $("#2").hasClass("user")) && !$("#5").hasClass("occupado") ||
+                    (($("#8").hasClass("comp") && $("#2").hasClass("comp") && !$("#5").hasClass("occupado")))){
                console.log("fourteenDZ");
                return 5;
-            } else if (($("#5").hasClass("user") && $("#8").hasClass("user")) ||
-                    (($("#5").hasClass("comp") && $("#8").hasClass("comp")))){
+            } else if (($("#5").hasClass("user") && $("#8").hasClass("user")) && !$("#2").hasClass("occupado") ||
+                    (($("#5").hasClass("comp") && $("#8").hasClass("comp") && !$("#2").hasClass("occupado")))){
                console.log("fifteenDZ");
                return 2;
-            } else if (($("#3").hasClass("user") && $("#6").hasClass("user")) ||
-                    (($("#3").hasClass("comp") && $("#6").hasClass("comp")))){
+            } else if (($("#3").hasClass("user") && $("#6").hasClass("user")) && !$("#9").hasClass("occupado") ||
+                    (($("#3").hasClass("comp") && $("#6").hasClass("comp") && !$("#9").hasClass("occupado")))){
                console.log("sixteenDZ");
                return 9;
-            } else if (($("#3").hasClass("user") && $("#9").hasClass("user")) ||
-                    (($("#3").hasClass("comp") && $("#9").hasClass("comp")))){
+            } else if (($("#3").hasClass("user") && $("#9").hasClass("user")) && !$("#6").hasClass("occupado") ||
+                    (($("#3").hasClass("comp") && $("#9").hasClass("comp") && !$("#6").hasClass("occupado")))){
                console.log("seventeenDZ");
                return 6;
-            } else if (($("#6").hasClass("user") && $("#9").hasClass("user")) ||
-                    (($("#6").hasClass("comp") && $("#9").hasClass("comp")))){
+            } else if (($("#6").hasClass("user") && $("#9").hasClass("user")) && !$("#3").hasClass("occupado") ||
+                    (($("#6").hasClass("comp") && $("#9").hasClass("comp") && !$("#3").hasClass("occupado")))){
                console.log("eighteenDZ");
                return 3;
-            } else if (($("#5").hasClass("user") && $("#1").hasClass("user")) ||
-                    (($("#5").hasClass("comp") && $("#1").hasClass("comp")))){
+            } else if (($("#5").hasClass("user") && $("#1").hasClass("user")) && !$("#9").hasClass("occupado") ||
+                    (($("#5").hasClass("comp") && $("#1").hasClass("comp") && !$("#9").hasClass("occupado")))){
                console.log("nineteenDZ");
                return 9;
-            } else if (($("#1").hasClass("user") && $("#9").hasClass("user")) ||
-                    (($("#1").hasClass("comp") && $("#9").hasClass("comp")))){
+            } else if (($("#1").hasClass("user") && $("#9").hasClass("user")) && !$("#5").hasClass("occupado") ||
+                    (($("#1").hasClass("comp") && $("#9").hasClass("comp") && !$("#5").hasClass("occupado")))){
                console.log("twentyDZ");
                return 5;
-            } else if (($("#5").hasClass("user") && $("#9").hasClass("user")) ||
-                    (($("#5").hasClass("comp") && $("#9").hasClass("comp")))){
+            } else if (($("#5").hasClass("user") && $("#9").hasClass("user")) && !$("#1").hasClass("occupado") ||
+                    (($("#5").hasClass("comp") && $("#9").hasClass("comp") && !$("#1").hasClass("occupado")))){
                console.log("twentyoneDZ");
                return 1;
-            } else {
+            } else if (($("#3").hasClass("user") && $("#7").hasClass("user")) && !$("#5").hasClass("occupado") ||
+                    (($("#3").hasClass("comp") && $("#7").hasClass("comp") && !$("#5").hasClass("occupado")))){
                console.log("twentytwoDZ");
+               return 5;
+            } else if (($("#3").hasClass("user") && $("#5").hasClass("user")) && !$("#7").hasClass("occupado") ||
+                    (($("#3").hasClass("comp") && $("#5").hasClass("comp") && !$("#7").hasClass("occupado")))){
+               console.log("twentythreeDZ");
+               return 7;
+            } else if (($("#5").hasClass("user") && $("#7").hasClass("user")) && !$("#3").hasClass("occupado") ||
+                    (($("#5").hasClass("comp") && $("#7").hasClass("comp") && !$("#3").hasClass("occupado")))){
+               console.log("twentyfourDZ");
+               return 3;
+            }else {
+               console.log("twentyfiveDZ");
                return randomNumber;
             }
          }
@@ -222,7 +234,7 @@ html
             }
             var workingID = "#" + randomChoice.toString();
             $(workingID).html(comp);
-            $(workingID).addClass("comp");
+            $(workingID).addClass("comp").addClass("occupado");
             var index = optionBox.indexOf(randomChoice);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -232,7 +244,7 @@ html
 
          $("#1").click(function () {
             $(this).html(user);
-            $("#1").addClass("user");
+            $("#1").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(1);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -242,7 +254,7 @@ html
          })
          $("#2").click(function () {
             $(this).html(user);
-            $("#2").addClass("user");
+            $("#2").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(2);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -252,7 +264,7 @@ html
          })
          $("#3").click(function () {
             $(this).html(user);
-            $("#3").addClass("user");
+            $("#3").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(3);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -262,7 +274,7 @@ html
          })
          $("#4").click(function () {
             $(this).html(user);
-            $("#4").addClass("user");
+            $("#4").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(4);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -272,7 +284,7 @@ html
          })
          $("#5").click(function () {
             $(this).html(user);
-            $("#5").addClass("user");
+            $("#5").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(5);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -282,7 +294,7 @@ html
          })
          $("#6").click(function () {
             $(this).html(user);
-            $("#6").addClass("user");
+            $("#6").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(6);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -292,7 +304,7 @@ html
          })
          $("#7").click(function () {
             $(this).html(user);
-            $("#7").addClass("user");
+            $("#7").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(7);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -302,7 +314,7 @@ html
          })
          $("#8").click(function () {
             $(this).html(user);
-            $("#8").addClass("user");
+            $("#8").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(8);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -312,7 +324,7 @@ html
          })
          $("#9").click(function () {
             $(this).html(user);
-            $("#9").addClass("user");
+            $("#9").addClass("user").addClass("occupado");
             var index = optionBox.indexOf(9);
             if (index > -1) {
                optionBox.splice(index, 1);
@@ -324,15 +336,15 @@ html
             optionBox = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             console.log(optionBox);
             $('.square').empty();
-            $("#1").css('color', 'black').removeClass("user", "comp");
-            $("#2").css('color', 'black').removeClass("user", "comp");
-            $("#3").css('color', 'black').removeClass("user", "comp");
-            $("#4").css('color', 'black').removeClass("user", "comp");
-            $("#5").css('color', 'black').removeClass("user", "comp");
-            $("#6").css('color', 'black').removeClass("user", "comp");
-            $("#7").css('color', 'black').removeClass("user", "comp");
-            $("#8").css('color', 'black').removeClass("user", "comp");
-            $("#9").css('color', 'black').removeClass("user", "comp");
+            $("#1").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#2").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#3").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#4").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#5").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#6").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#7").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#8").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#9").css('color', 'black').removeClass("user").removeClass("comp").removeClass("occupado");
          })
 
 

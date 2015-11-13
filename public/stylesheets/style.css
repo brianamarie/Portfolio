@@ -36,7 +36,6 @@ a:visited {
 
 a {
   color: white;
-  margin: 2px;
   background: rgba(55,55,55,0.8);
 }
 h1 {
@@ -68,4 +67,45 @@ h1 {
 
 .contact {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b5/Liberty_Memorial_By_Night.jpg");
+}
+
+.portPic{
+  padding: 15% 10% 20% 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 5em;
+  color: white;
+}
+
+.calculator {
+  background-image: url("/images/calculator.png")
+}
+
+.tictactoe {
+  background-image: url("/images/tictactoe.png")
+}
+
+.pomodoro {
+  background-image: url("/images/pomodoro.png")
+}
+
+.quote {
+  background-image: url("/images/quote.png")
+}
+
+.twitch {
+  background-image: url("/images/twitch.png")
+}
+
+.weather {
+  background-image: url("/images/weather.png")
+}
+
+.wedding {
+  background-image: url("/images/wedding.png")
+}
+
+.wikipedia {
+  background-image: url("/images/wikipedia.png")
 }

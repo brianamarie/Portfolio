@@ -47,6 +47,10 @@ h1 {
   border: 1px solid white;
 
 }
+.headshot{
+  background-image:url("https://qph.is.quoracdn.net/main-qimg-d3c651ebca56d4c3cfbbebd736674f1d?convert_to_webp=true");
+  height: 5em;
+}
 .cover {
   background-image: url("http://ums.aadl.org/files/photos/ums_photos_00118.jpg");
   height: 45em;
@@ -54,6 +58,7 @@ h1 {
 }
 
 .info {
+  margin-top: -10em;
   background-image: url("http://aaronlindberg.com/wp-content/uploads/2014/07/KansasCityArchitecturalPhotographer_02-1024x682.jpg");
 }
 

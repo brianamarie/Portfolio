@@ -1,6 +1,6 @@
 body {
   font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: white;
+  color: #F7F7F7;
 }
 
 .my-fluid-container {
@@ -17,34 +17,30 @@ body {
 }
 .background {
   background-attachment: fixed;
-  padding: 15% 10% 20% 10%;
   background-size: cover;
+  padding-top: 30px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .cloudy {
-  background-color: rgba(110, 110, 110, 0.7);
-  color: white;
+  background-color: rgba(110, 100, 91, 0.7);
+  color: #F7F7F7;
   padding: 1em;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-a:visited {
-  color: white;
+a:visited, a:active, a:link {
+  color: #F7F7F7;
 }
 
-a {
-  color: white;
-  background: rgba(55,55,55,0.8);
-}
 h1 {
   font-size: 5em;
 }
 .img-center{
   margin: 0 auto;
   width: 90%;
-  border: 1px solid white;
+  border: 1px solid #F7F7F7;
 
 }
 .headshot{
@@ -58,7 +54,6 @@ h1 {
 }
 
 .info {
-  margin-top: -10em;
   background-image: url("http://aaronlindberg.com/wp-content/uploads/2014/07/KansasCityArchitecturalPhotographer_02-1024x682.jpg");
 }
 
@@ -75,16 +70,19 @@ h1 {
 }
 
 .portPic{
-  padding: 15% 10% 20% 10%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  height: 5em;
-  color: white;
+  height: 15em;
+  color: #F7F7F7;
+  border: 15px solid #001739;
+  padding-top: 3%;
 }
 
 .calculator {
-  background-image: url("/images/calculator.png")
+  background-image: url("/images/calculator.png");
+  border-top-right-radius: 10px;
+
 }
 
 .tictactoe {
@@ -92,7 +90,8 @@ h1 {
 }
 
 .pomodoro {
-  background-image: url("/images/pomodoro.png")
+  background-image: url("/images/pomodoro.png");
+  border-bottom-left-radius: 10px;
 }
 
 .quote {
@@ -100,7 +99,8 @@ h1 {
 }
 
 .twitch {
-  background-image: url("/images/twitch.png")
+  background-image: url("/images/twitch.png");
+  border-bottom-right-radius: 10px;
 }
 
 .weather {
@@ -108,7 +108,8 @@ h1 {
 }
 
 .wedding {
-  background-image: url("/images/wedding.png")
+  background-image: url("/images/wedding.png");
+  border-top-left-radius: 10px;
 }
 
 .wikipedia {

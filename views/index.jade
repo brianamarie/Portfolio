@@ -1,66 +1,26 @@
 extends layout
 
 block content
-  body.background.info
-    .container
-      .row.div.cloudy.text-center
-        h1 Briana Swift
-        .row
-          .col-sm-2.col-sm-offset-1
-            a.btn.btn-block(href='#', target='_blank') LinkedIn
-          .col-sm-2
-            a.btn.btn-block(href='https://twitter.com/brianamarie132', target='_blank') Twitter
-          .col-sm-2
-            a.btn.btn-block(href='https://www.js.youtube.com/playlist?list=PLWKjhJtqVAbmfoj2Th9fvxhHIeqFO7wOy', target='_blank') YouTube
-          .col-sm-2
-            a.btn.btn-block(href='http://www.js.freecodecamp.com/brianamarie', target='_blank') Free Code Camp
-          .col-sm-2
-            a.btn.btn-block(href='https://github.com/brianamarie', target='_blank') GitHub
-      br
-      .row.row-eq-height
-        .div.cloudy.col-md-6.col-sm-7
-          h2.text-center About Me
-          p I am a self-taught developer still finding my place in the stack. Passionate about the future of web development and curious about exploring 3D printing, I am constantly seeking out new ways to create with code.
-          p To see me light up with excitement, ask me about my contributions to Free Code Camp. I love learning alongside others. I stream regularly on the Free Code Camp Twitch.tv channel, contribute to the curriculum, and participate reguarly in the 'Monthly Summits' sharing new site features with users.
-          p I currently work full time as an elementary music teacher in Illinois. I am working daily to hone my tech skills, striving towards full time employment in tech.
-          p You can find my current balance of education and programming on the 'Computer Science and Software Engineering with Briana' playlist on Free Code Camp's YouTube channel. The audience is beginners to tech wanting background knowledge on Computer Science.
-          a(href="https://www.youtube.com/playlist?list=PLWKjhJtqVAbmfoj2Th9fvxhHIeqFO7wOy") See it for yourself here.
-        .div.col-md-6.col-sm-5
-          img.img-responsive.img-rounded(src="https://qph.is.quoracdn.net/main-qimg-d3c651ebca56d4c3cfbbebd736674f1d?convert_to_webp=true")
-      br
-      .row
-        .cloudy
-          a(name='port')
-          h2 Portfolio
-          p Check out some of my recent projects.
-          a(href='https://github.com/brianamarie') View the source code here.
-            .my-fluid-container.text-center
-              br
-              .row
-                a(href='swiftwilliamswedding.com').portPic.wedding.col-xs-12.col-sm-6
-                  .cloudy
-                    h3 My Wedding Site
-                a(href='/calculator').portPic.calculator.col-xs-12.col-sm-6
-                  .cloudy
-                    h3 Calculator
-              .row
-                a(href='/tictactoe').portPic.tictactoe.col-xs-12.col-sm-6
-                  .cloudy
-                    h3 Tic Tac Toe
-                a(href='/quotegen').portPic.quote.col-xs-12.col-sm-6
-                  .cloudy
-                    h3 Random Quote Generator
-              .row
-                a(href='/wikiview').portPic.wikipedia.col-xs-12.col-sm-6
-                  .cloudy
-                    h3 Wikipedia Viewer
-                a(href='/weather').portPic.weather.col-xs-12.col-sm-6
-                  .cloudy
-                    h3 Weather App
-              .row
-                a(href='/pomodoro').portPic.pomodoro.col-xs-12.col-sm-6
-                  .cloudy
-                    h3 Pomodoro Timer
-                a(href='/twitch').portPic.twitch.col-xs-12.col-sm-6
-                  .cloudy
-                    h3 Twitch Viewer
+  body
+    nav.navbar.navbar-custom
+      .container-fluid.nav
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          .nameTitle
+            h1 BRIANA SWIFT
+            h5 Web Designer & Front-end Developer
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#').h1.navbar-brand.navLink ABOUT
+            li
+              a(href='#').h1.navbar-brand PORTFOLIO
+            li
+              a(href='#').h1.navbar-brand TESTIMONIALS
+            li
+              a(href='#').h1.navbar-brand ARTICLES
+            li
+              a(href='#').h1.navbar-brand
+                button CONTACT

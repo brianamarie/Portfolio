@@ -2,25 +2,63 @@ extends layout
 
 block content
   body
-    nav.navbar.navbar-custom
-      .container-fluid.nav
-        // Brand and toggle get grouped for better mobile display
-        .navbar-header
-          .nameTitle
-            h1 BRIANA SWIFT
-            h5 Web Designer & Front-end Developer
-        // Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          ul.nav.navbar-nav
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='#').h1.navbar-brand.navLink ABOUT
-            li
-              a(href='#').h1.navbar-brand PORTFOLIO
-            li
-              a(href='#').h1.navbar-brand TESTIMONIALS
-            li
-              a(href='#').h1.navbar-brand ARTICLES
-            li
-              a(href='#').h1.navbar-brand
-                button CONTACT
+    .container-fluid
+      .row.nav2
+        nav.navbar.navbar-custom
+          // Brand and toggle get grouped for better mobile display
+          .navbar-header.nameTitle.text-center
+            h2 BRIANA SWIFT
+          // Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='#').h1.navbar-brand.navLink ABOUT
+              li
+                a(href='#').h1.navbar-brand PORTFOLIO
+              li
+                a(href='#').h1.navbar-brand TESTIMONIALS
+              li
+                a(href='#').h1.navbar-brand ARTICLES
+              li
+                a(href='#').h1.navbar-brand
+                  button CONTACT
+      .row.nav2
+        h1.text-center Web Designer & Front-end Web Developer
+      .row
+        .row
+          a(href='https://www.swiftwilliamswedding.com').portfolio.wedding.col-xs-12.col-sm-4
+          a(href='/calculator').portfolio.calculator.col-xs-12.col-sm-4
+          a(href='/tictactoe').portfolio.tictactoe.col-xs-12.col-sm-4
+        .row
+          a(href='/quotegen').portfolio.quote.col-xs-12.col-sm-4
+          a(href='/wikiview').portfolio.wikipedia.col-xs-12.col-sm-4
+          a(href='/weather').portfolio.weather.col-xs-12.col-sm-4
+        .row
+          a(href='/pomodoro').portfolio.pomodoro.col-xs-12.col-sm-4
+          a(href='/twitch').portfolio.twitch.col-xs-12.col-sm-4
+          a(href='https://www.swiftwilliamswedding.com').portfolio.wedding.col-xs-12.col-sm-4
+      .row
+        .testimonial.col-xs-12.col-sm-8.col-sm-offset-2
+          h1.text-center "
+          p "Briana is the most badass that I've ever met, and I think you should hire her immediately and give her one million dollars."
+          h5.text-right -President Lincoln
+          br
+      .row
+        .testimonial.col-xs-12.col-sm-8.col-sm-offset-2
+          h1.text-center "
+          p "Briana is the most badass that I've ever met, and I think you should hire her immediately and give her one million dollars."
+          h5.text-right -President Lincoln
+          br
+      .row
+        .testimonial.col-xs-12.col-sm-8.col-sm-offset-2
+          h1.text-center "
+          p "Briana is the most badass that I've ever met, and I think you should hire her immediately and give her one million dollars."
+          h5.text-right -President Lincoln
+          br
+      .row.learnMore
+        h4.text-center LEARN ABOUT BRIANA'S SKILL SET AND WORKFLOW
+      .row.foot.text-center
+        .col-xs-12.col-sm-4 Picture & small bio
+        .col-xs-12.col-sm-4 Links to shit
+        .col-xs-12.col-sm-4 More shit

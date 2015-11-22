@@ -80,7 +80,7 @@ body {
   color: #757575;
 }
 .nav {
-  background-color: rgb(150,150,150);
+  background-color: #454955;
 }
 
 .nameTitle {
@@ -89,7 +89,7 @@ body {
 }
 
 .nav2 {
-  background-color: rgb(150,150,150);
+  background-color: #454955;
   color: white;
   height: 15em;
 }
@@ -117,8 +117,15 @@ h1 {
   font-size: 5em;
 }
 
+.info {
+  background-color: rgba(69, 73, 84, 0.5);
+  color: rgba(0, 0, 0, 0);
+  height: 0px;
+  padding: 2px;
+}
+
 .learnMore{
-  background-color: rgb(150,150,150);
+  background-color: #454955;
   color: white;
 }
 
@@ -132,26 +139,12 @@ h1 {
   background-image:url("https://qph.is.quoracdn.net/main-qimg-d3c651ebca56d4c3cfbbebd736674f1d?convert_to_webp=true");
   height: 5em;
 }
-.cover {
-  background-image: url("http://ums.aadl.org/files/photos/ums_photos_00118.jpg");
-  height: 45em;
-  margin-top: -10em;
-}
-
-.info {
-  background-image: url("http://aaronlindberg.com/wp-content/uploads/2014/07/KansasCityArchitecturalPhotographer_02-1024x682.jpg");
-}
-
-.portfolio2 {
-  background-image: url("https://img1.etsystatic.com/054/0/9038119/il_fullxfull.723580211_8o8w.jpg");
-}
 
 .portfolio{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   height: 15em;
-  color: #F7F7F7;
   padding-top: 3%;
 }
 

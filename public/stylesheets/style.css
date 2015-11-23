@@ -118,10 +118,26 @@ h1 {
 }
 
 .info {
-  background-color: rgba(69, 73, 84, 0.5);
+  background-color: rgba(69, 73, 84, 0.7);
   color: rgba(0, 0, 0, 0);
-  height: 0px;
-  padding: 2px;
+  height: 0%;
+  padding-top: 2px;
+  position: absolute;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.left {
+  padding-left: 6%;
+}
+
+.right {
+  padding-right: 5%;
 }
 
 .learnMore{
@@ -131,10 +147,10 @@ h1 {
 
 .img-center{
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   border: 1px solid #F7F7F7;
-
 }
+
 .headshot{
   background-image:url("https://qph.is.quoracdn.net/main-qimg-d3c651ebca56d4c3cfbbebd736674f1d?convert_to_webp=true");
   height: 5em;
@@ -145,25 +161,10 @@ h1 {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   height: 15em;
-  padding-top: 3%;
-}
-
-.feature {
-  padding: 12px;
 }
 
 .contact {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b5/Liberty_Memorial_By_Night.jpg");
-}
-
-.portPic2{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  height: 15em;
-  color: #F7F7F7;
-  border: 15px solid #001739;
-  padding-top: 3%;
 }
 
 .foot{
@@ -171,9 +172,9 @@ h1 {
   background-color: #0b0744;
   color: white;
 }
+
 .calculator {
   background-image: url("/images/calculator.png");
-
 }
 
 .tictactoe {

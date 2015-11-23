@@ -5,9 +5,9 @@ $(document).ready(function(){
 
 
     function animateInfo(divClass, infoID){
-        $(infoID).stop().animate({height: "75%"}).css({color: "white"});
+        $(infoID).stop().removeClass('hidden').animate({height: "100%"}).css({color: "white"});
         $(divClass).mouseleave(function(){
-            $(infoID).stop().animate({height: "0px"}).css({color: "rgba(0,0,0,0)"});
+            $(infoID).stop().animate({height: "0px"}).css({color: "rgba(0,0,0,0)"}).addClass('hidden');
         })
     }
 

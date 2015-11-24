@@ -143,6 +143,20 @@ h1 {
 .learnMore{
   background-color: #454955;
   color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.learnMore:hover,
+.learnMore:focus{
+  background-color: #454955;
+  color: #e6e6e6;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padLeft {
+  padding-left: 4px;
 }
 
 .img-center{
@@ -156,6 +170,14 @@ h1 {
   padding-right: 5px;
 }
 
+.footLink{
+
+}
+
+.footLink:hover,
+.footLink:focus{
+  color: #e6e6e6;
+}
 .portfolio{
   background-size: cover;
   background-repeat: no-repeat;

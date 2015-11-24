@@ -151,9 +151,9 @@ h1 {
   border: 1px solid #F7F7F7;
 }
 
-.headshot{
-  background-image:url("https://qph.is.quoracdn.net/main-qimg-d3c651ebca56d4c3cfbbebd736674f1d?convert_to_webp=true");
-  height: 5em;
+.footInfo {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .portfolio{
@@ -168,7 +168,7 @@ h1 {
 }
 
 .foot{
-  height: 15em;
+  height: 100%;
   background-color: #0b0744;
   color: white;
 }

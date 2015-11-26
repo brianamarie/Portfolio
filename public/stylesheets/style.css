@@ -141,15 +141,15 @@ h1 {
 }
 
 .learnMore{
-  background-color: #454955;
   color: white;
   padding-top: 2em;
   padding-bottom: 2em;
+  background-color: transparent;
 }
 
 .learnMore:hover,
 .learnMore:focus{
-  background-color: #454955;
+  background-color: transparent;
   color: #e6e6e6;
   padding-top: 2em;
   padding-bottom: 2em;

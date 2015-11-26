@@ -7,24 +7,30 @@ block content
         nav.navbar.navbar-custom
           // Brand and toggle get grouped for better mobile display
           .navbar-header.nameTitle.text-center
-            h2 BRIANA SWIFT
+            a(href="#").learnMore
+              h2 BRIANA SWIFT
           // Collect the nav links, forms, and other content for toggling
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
             ul.nav.navbar-nav.navbar-right
               li
-                a(href='#').h1.navbar-brand.navLink ABOUT
+                a(href='/about').h1.navbar-brand ABOUT
               li
-                a(href='#').h1.navbar-brand PORTFOLIO
+                a(href='/#portfolio').h1.navbar-brand PORTFOLIO
               li
-                a(href='#').h1.navbar-brand TESTIMONIALS
+                a(href='/#test').h1.navbar-brand TESTIMONIALS
               li
-                a(href='#').h1.navbar-brand
+                a(href='/contact').h1.navbar-brand
                   button CONTACT
-      .row.nav2
-        h1.text-center Web Designer & Front-end Web Developer
+      .row.nav2.text-center
+        h1 Web Designer & Front-end Web Developer
+        br
+        a(href='/#portfolio').learnMore
+          h5 VIEW BRIANA'S PORTFOLIO
+          i.fa.fa-chevron-down
       .row
         .row.text-center
+          a(name="portfolio")
           a(href='http://www.swiftwilliamswedding.com').portfolio.wedding.col-xs-12.col-sm-6
             #weddingInfo.info.hidden-xs.hidden.left
               h1.text-center Wedding Site
@@ -61,6 +67,7 @@ block content
               h1.text-center Random Quotes
               p.text-left Read some of my favorite quotes in this simple front-end quote randomizer.
       .row
+        a(name="test")
         .testimonial.col-xs-12.col-sm-8.col-sm-offset-2
           h1.text-center "
           p "Briana is the most badass that I've ever met, and I think you should hire her immediately and give her one million dollars."

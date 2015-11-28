@@ -55,6 +55,10 @@ app.get('/tictactoe', function (req, res, next) {
   res.render('./tictactoe.jade', { title: 'Tic-Tac-Toe', message: 'Hello there!'});
 });
 
+app.get('/about', function (req, res, next) {
+  res.render('./about.jade', { title: 'about', message: 'Hello there!'});
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

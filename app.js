@@ -63,6 +63,10 @@ app.get('/contact', function (req, res, next) {
   res.render('./contact.jade', { title: 'contact', message: 'Hello there!'});
 });
 
+app.get('/john', function (req, res, next) {
+  res.render('./john.jade', { title: 'john', message: 'Hello there!'});
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

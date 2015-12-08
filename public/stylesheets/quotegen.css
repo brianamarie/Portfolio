@@ -1,21 +1,19 @@
 button {
-    background-color: #C2B8B2;
-    color: #204B57;
+    background-color: #49C48E;
+    color: #40727B;
     margin: 0 auto;
     width: 8%;
     padding: 2px;
-    border: 2px solid #204B57;
+    border: 2px solid #111C76;
     border-radius:30px;
-    box-shadow:  5px 5px 5px black;
 }
 
 div{
-    background-color: #C2B8B2;
-    color: #204B57;
+    background-color: #49C48E;
+    color: #111C76;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #204B57;
-    box-shadow:  5px 5px 5px black;
+    border: 2px solid #111C76;
 }
 
 p{
@@ -24,7 +22,8 @@ p{
 }
 
 .body{
-    background-color: #8A716A;
+    background-color: #BBF8CF;
+    color: #111C76;
 }
 .title{
     font-family: 'Niconne', cursive;
@@ -33,7 +32,7 @@ p{
     font-family: 'Patua One', cursive;
 }
 .author{
-    color: #125E8A;
+    color: #40727B;
     font-family: 'Niconne', cursive;
     padding: 5px;
 }
@@ -41,3 +40,9 @@ p{
 .viewCode{
     width: 20%;
 }
+
+body color- other blue
+body text- blue
+quote div- signature dish OR misery seafoam
+quote div text- china blue
+author text- blue

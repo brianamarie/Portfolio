@@ -25,6 +25,7 @@ html
             h2.author
          br
          form(align='center')
+            a.twitter-share-button(href="https://twitter.com/intent/tweet" rel="") Tweet
             button(onclick='history.go(0)')  +
 
          // <a href="https://twitter.com/share" class="twitter-share-button" data-via="brianamarie132" data-related="freecodecamp" data-hashtags="learntocode">Tweet</a>!
@@ -219,12 +220,11 @@ html
             var current = (Math.random() * (quotes.length - 0));
             var current1 = Math.round(current);
             //jQuery putting into div the current random quote and author
-            $(document).ready(
-                    $('.append').append(quotes[current1].quote.toString())
-            );
-            $(document).ready(
-                    $('.author').append("-").append(quotes[current1].author.toString())
-            );
+            $(document).ready(function(){
+               $('.append').append(quotes[current1].quote.toString());
+               $('.author').append("-").append(quotes[current1].author.toString());
+               document.title = quotes[current1].quote.toString() + " -" + quotes[current1].author.toString() + " @brianamarie";
+            });
 
             //twitter code
             !function (d, s, id) {

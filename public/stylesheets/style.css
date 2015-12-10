@@ -7,35 +7,28 @@ body {
   padding: 0px;
 }
 
-.navbar-custom .navbar-brand {
-  color: #ffffff;
-}
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus {
-  color: #e6e6e6;
-  background-color: transparent;
-}
-.navbar-custom .navbar-text {
-  color: #ffffff;
-}
-.navbar-custom .navbar-nav > li:last-child > a {
 
-}
 .navbar-custom .navbar-nav > li > a {
   color: #ffffff;
+}
 
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #757575;
+  background-color: transparent;
+}
+
+.navbar-custom .navbar-nav > li > .briananav {
+  color: #ffffff;
+}
+
+.navbar-custom .navbar-nav > li > .briananav:hover,
+.navbar-custom .navbar-nav > li > .briananav:focus {
+  color: #ffffff;
+  background-color: #2D877B;
 }
 
 .navbar-custom .navbar-nav > li > a > button{
-  color: #ffffff;
-  background-color: transparent;
-  margin: 0;
-  border: 0px;
-  padding: 10px;
-
-}
-
-.navbar-custom .navbar-nav > li > a > button {
   color: #ffffff;
   background-color: #2D877B;
   margin: 0;
@@ -60,12 +53,6 @@ body {
   padding: 8px;
 }
 
-.navbar-custom .navbar-nav > li > a:hover,
-.navbar-custom .navbar-nav > li > a:focus {
-  color: #757575;
-  background-color: transparent;
-}
-
 .navbar-custom .navbar-nav > .disabled > a,
 .navbar-custom .navbar-nav > .disabled > a:hover,
 .navbar-custom .navbar-nav > .disabled > a:focus {
@@ -81,6 +68,11 @@ body {
 }
 .nav {
   background-color: #3C474B;
+}
+
+.portbanner {
+  height: 3em;
+  background-color: #2D877B;
 }
 
 .nameTitle {

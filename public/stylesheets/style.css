@@ -86,6 +86,12 @@ body {
   height: 15em;
 }
 
+.nav3 {
+  background-color: #3C474B;
+  color: white;
+  height: 11em;
+}
+
 .background {
   background-attachment: fixed;
   background-size: cover;

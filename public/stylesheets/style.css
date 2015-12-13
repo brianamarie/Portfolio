@@ -7,6 +7,10 @@ body {
   padding: 0px;
 }
 
+.container {
+  width: 50%;
+}
+
 
 .navbar-custom .navbar-nav > li > a {
   color: #ffffff;
@@ -100,19 +104,16 @@ body {
   background-position: 50% 50%;
 }
 
-.cloudy {
-  background-color: rgba(110, 100, 91, 0.7);
-  color: #F7F7F7;
-  padding: 1em;
-  border-radius: 5px;
-}
-
 a:visited, a:active, a:link {
   color: #F7F7F7;
 }
 
 h1 {
   font-size: 5em;
+}
+
+p {
+  line-height: 2em;
 }
 
 .info {
@@ -170,13 +171,19 @@ h1 {
   border: 1px solid #F7F7F7;
 }
 
+.port-img {
+  background-image: url("https://qph.is.quoracdn.net/main-qimg-d3c651ebca56d4c3cfbbebd736674f1d?convert_to_webp=true");
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  margin-right: 15px;
+  margin-top: 5px;
+  float: left;
+}
+
 .footInfo {
   padding-left: 5px;
   padding-right: 5px;
-}
-
-.footLink{
-
 }
 
 .footLink:hover,

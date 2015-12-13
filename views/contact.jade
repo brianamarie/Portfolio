@@ -1,3 +1,59 @@
 //
    Created by Briana on 11/28/15.
 
+extends layout
+block content
+   body
+      .container-fluid
+         .row.nav3
+            nav.navbar.navbar-custom
+               // Brand and toggle get grouped for better mobile display
+               .navbar-header.nameTitle.text-center
+                  a(href="/").learnMore
+                     h2 BRIANA SWIFT
+               // Collect the nav links, forms, and other content for toggling
+               #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                  ul.nav.navbar-nav
+                  ul.nav.navbar-nav.navbar-right
+                     li
+                        a(href='/about').h1.navbar-brand.briananav ABOUT
+                     li
+                        a(href='/#portfolio').h1.navbar-brand.briananav PORTFOLIO
+                     li
+                        a(href='/#test').h1.navbar-brand.briananav TESTIMONIALS
+                     li
+                        a(href='/contact').h1.navbar-brand
+                           button CONTACT
+         .row.nav3.text-center
+            h1 Web Designer & Front-end Web Developer
+            br
+            a(href='/#portfolio').learnMore
+               h5 VIEW BRIANA'S PORTFOLIO
+               i.fa.fa-chevron-down
+         .row.portbanner
+         .row
+            br
+            .col-xs-3
+            .col-xs-6
+               .port-img
+               p Text Text Text let's seeee if this works the way that I expect it to Text Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it to
+               p Text Text Text let's seeee if this works the way that I expect it to Text Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it to
+               p Text Text Text let's seeee if this works the way that I expect it to Text Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it toText Text Text let's seeee if this works the way that I expect it to
+               ul
+                  li thing
+                  li thing
+                  li thing
+               ul
+                  li thing
+                  li thing
+                  li thing
+               h2 Skills
+               p Text Text Text let's seeee if this works the way that I expect it to Text Text Text let's seeee if this works the way that I expect it toText Text Text
+               p Text Text Text let's seeee if this works the way that I expect it to Text Text Text let's seeee if this works the way that I expect it toText Text Text
+               p Text Text Text let's seeee if this works the way that I expect it to Text Text Text let's seeee if this works the way that I expect it toText Text Text
+            .col-xs-3
+         .row.learnMoreBG
+            a(href='/about').learnMore
+               h4.text-center LEARN ABOUT BRIANA'S SKILL SET AND WORKFLOW
+                  i.fa.fa-chevron-right.padLeft
+         include ./footer.jade

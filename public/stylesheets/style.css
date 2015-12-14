@@ -116,6 +116,39 @@ p {
   line-height: 2em;
 }
 
+ul {
+  line-height: 2em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about > li {
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border: none;
+}
+
+.about > li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 200px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.about > li a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+
 .info {
   background-color: rgba(63, 64, 69, 0.7);
   color: rgba(0, 0, 0, 0);
@@ -195,6 +228,11 @@ p {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   height: 15em;
+}
+
+.skillsList{
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .contact {

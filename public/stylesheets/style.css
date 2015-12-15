@@ -223,6 +223,7 @@ li:last-child {
 .footLink:focus{
   color: #3C474B;
 }
+
 .portfolio{
   background-size: cover;
   background-repeat: no-repeat;
@@ -237,6 +238,18 @@ li:last-child {
 
 .contact {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b5/Liberty_Memorial_By_Night.jpg");
+}
+
+.contact-fa{
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #3C474B;
+}
+
+.contact-fa a:hover,
+.contact-fa a:active,
+.contact-fa a:visited {
+  color: #3C474B;
 }
 
 .foot{

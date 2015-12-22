@@ -17,6 +17,7 @@ html
       body
          div(class="container text-center shade")
             h1.response
+            button.f Metric
             br
             h2.temp
             br
@@ -61,10 +62,28 @@ html
                         format: "json"
                      },
                      success: function (response) {
+                        console.log(response);
                         $('.temp').append(response.current_observation.temp_f.toString() + "&#176;f");
                         var temp = response.current_observation.temp_f;
                         $('.rain').append(response.current_observation.precip_1hr_in.toString() + '" of precipitation this hour');
                         $('.wind').append("Wind: " + response.current_observation.wind_string);
+
+                        $('button').click(function () {
+                           if ($('button').hasClass('.f')) {
+                              $('.temp').html(response.current_observation.temp_f.toString() + "&#176;f");
+                              $('button').removeClass('.f');
+                              $('button').html("Metric");
+                              $('.rain').html(response.current_observation.precip_1hr_in.toString() + '" of precipitation this hour');
+                              $('.wind').html("Wind: " + response.current_observation.wind_string);
+                           } else {
+                              $('button').addClass('.f');
+                              $('button').html("Imperial");
+                              $('.temp').html(response.current_observation.temp_c.toString() + "&#176;c");
+                              $('.rain').html(response.current_observation.precip_1hr_metric.toString() + 'mm of precipitation this hour');
+                              $('.wind').html("Wind: " + response.current_observation.wind_kph + " KPH from the " + response.current_observation.wind_dir);
+                           }
+                        });
+
                         if (temp >= 85) {
                            $('body').css({"background-image": 'url("http://alifeabroad.com/wp-content/uploads/2011/06/Beautiful-Sunset.jpg")'});
                         } else if ((temp >= 50) && (temp < 85)) {

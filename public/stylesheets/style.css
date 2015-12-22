@@ -262,6 +262,10 @@ li:last-child {
   background-image: url("/images/calculator.png");
 }
 
+.campernews {
+  background-image: url("/images/Screen Shot 2015-12-22 at 1.33.09 PM.png");
+}
+
 .tictactoe {
   background-image: url("/images/tictactoe.png")
 }

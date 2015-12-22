@@ -43,7 +43,7 @@ $(document).ready(function(){
         animateInfo('.twitch','#twitchInfo');
     })
 
-    $('.wedding2').hover(function(){
-        animateInfo('.wedding2','#weddingInfo2');
+    $('.campernews').hover(function(){
+        animateInfo('.campernews','#campernewsInfo');
     })
 })

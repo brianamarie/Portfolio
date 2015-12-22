@@ -29,6 +29,7 @@ html
                     .well.md-body-6
                         h1.md-display-3 OFFLINE
                         h4.offline
+            .row.error
         script.
             /**
              * Created by Briana on 10/27/15.
@@ -43,6 +44,9 @@ html
                 },
                 success: function (response) {
                     $('.all').append();
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, medrybw has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.js.twitch.tv/medrybw">medrybw</a></p>');
                     } else {
@@ -62,6 +66,9 @@ html
                 },
                 success: function (response) {
                     $('.all').append("<p>Free Code Camp</p>");
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, FreeCodeCamp has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.js.twitch.tv/freecodecamp">Free Code Camp</a></p>');
                     } else {
@@ -81,6 +88,9 @@ html
                 },
                 success: function (response) {
                     $('.all').append("<p>storbeck</p>");
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, storbeck has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.js.twitch.tv/storbeck">storbeck</a></p>');
                     } else {
@@ -100,6 +110,9 @@ html
                 },
                 success: function (response) {
                     $('.all').append('<p><a href = "http://www.js.twitch.tv/terakilobyte">terakilobyte</a></p>');
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, terakilobyte has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.js.twitch.tv/terakilobyte">terakilobyte</a></p>');
                     } else {
@@ -119,6 +132,9 @@ html
                 },
                 success: function (response) {
                     $('.all').append("<p>piecedigital</p>");
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, piecedigital has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.js.twitch.tv/piecedigital">piecedigital</a></p>');
                     } else {
@@ -138,6 +154,9 @@ html
                 },
                 success: function (response) {
                     $('.all').append("<p>habathcx</p>");
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, habathcx has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.js.twitch.tv/habathcx">habathcx</a></p>');
                     } else {
@@ -157,6 +176,9 @@ html
                 },
                 success: function (response) {
                     $('.all').append("<p>RobotCaleb</p>");
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, RobotCaleb has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
                         $('.offline').append('<p><a href = "http://www.js.twitch.tv/robotcaleb">RobotCaleb</a></p>');
                     } else {
@@ -165,9 +187,9 @@ html
                     }
                 }
             });
-            //thomasballinger
+            //brunofin
             jQuery.ajax({
-                url: "https://api.twitch.tv/kraken/streams/thomasballinger",
+                url: "https://api.twitch.tv/kraken/streams/brunofin",
                 jsonp: "callback",
                 dataType: "jsonp",
                 data: {
@@ -175,18 +197,21 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    $('.all').append("<p>thomasballinger</p>");
+                    $('.all').append("<p>brunofin</p>");
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, brunofin has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
-                        $('.offline').append('<p><a href = "http://www.js.twitch.tv/thomasballinger">thomasballinger</a></p>');
+                        $('.offline').append('<p><a href = "http://www.js.twitch.tv/brunofin">brunofin</a></p>');
                     } else {
-                        $('.streamName').append('<p><a href = "http://www.js.twitch.tv/thomasballinger">thomasballinger</a></p>');
+                        $('.streamName').append('<p><a href = "http://www.js.twitch.tv/brunofin">brunofin</a></p>');
                         $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }
             });
-            //brianamarie
+            //brianamarie132
             jQuery.ajax({
-                url: "https://api.twitch.tv/kraken/streams/brianamarie",
+                url: "https://api.twitch.tv/kraken/streams/brianamarie132",
                 jsonp: "callback",
                 dataType: "jsonp",
                 data: {
@@ -194,11 +219,14 @@ html
                     format: "json"
                 },
                 success: function (response) {
-                    $('.all').append("<p>brianamarie</p>");
+                    $('.all').append("<p>brianamarie132</p>");
+                    if (response.status === 422){
+                        $('.error').append('<p><i>Sadly, brianamarie132 has retired from twitch.tv. That channel is now gone.</i></p>');
+                    }
                     if (response.stream == null) {
-                        $('.offline').append('<p><a href = "http://www.js.twitch.tv/brianamarie">brianamarie</a></p>');
+                        $('.offline').append('<p><a href = "http://www.js.twitch.tv/brianamarie">brianamarie132</a></p>');
                     } else {
-                        $('.streamName').append('<p><a href = "http://www.js.twitch.tv/brianamarie">brianamarie</a></p>');
+                        $('.streamName').append('<p><a href = "http://www.js.twitch.tv/brianamarie132">brianamarie132</a></p>');
                         $('.streamInfo').append(response.stream.channel.status.toString());
                     }
                 }

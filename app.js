@@ -71,6 +71,10 @@ app.get('/campernews', function (req, res, next) {
   res.render('./campernews.jade', { title: 'Camper News', message: 'Hello there!'});
 });
 
+app.get('/simon', function(req, res, next) {
+  res.render('./simon.jade', {title: 'Simon Game', message: 'Hello there!'});
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

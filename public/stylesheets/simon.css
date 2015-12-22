@@ -1,0 +1,19 @@
+.redActive {
+    background-color: red;
+    color: white;
+}
+
+.blueActive {
+    background-color: blue;
+    color: white;
+}
+
+.yellowActive {
+    background-color: yellow;
+    color: white;
+}
+
+.greenActive {
+    background-color: green;
+    color: white;
+}

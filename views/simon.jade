@@ -22,6 +22,88 @@ html
            .row
               button Start
            .row
+              .col-xs-6#red Red
+              .col-xs-6#blue Blue
            .row
+              .col-xs-6#yellow Yellow
+              .col-xs-6#green Green
            .row
    script.
+      //computer starts with empty pattern
+      var compArr = [];
+
+      var randomizer = function(){
+      //function returns a random color function
+         var colorFunctionChoices = [Red(), Blue(), Yellow(), Green()];
+         var random = Math.floor(Math.random() * (4 - 1)) + 1;
+         return colorFunctionChoices[1];
+      };
+
+      var Red = function(){
+         //when called, this function will light up #red and play a designated sound
+         var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
+         audio.play();
+
+         $("#red").toggleClass("redActive");
+         setTimeout(function(){
+            $("#red").toggleClass("redActive");
+         }, 1000);
+      };
+
+      var Blue = function(){
+         //when called, this function will light up #blue and play a designated sound
+         var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
+         audio.play();
+
+         $("#blue").toggleClass("blueActive");
+            setTimeout(function(){
+            $("#blue").toggleClass("blueActive");
+         }, 1000);
+      };
+
+      var Yellow = function(){
+         //when called, this function will light up #yellow and play a designated sound
+         var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
+         audio.play();
+
+         $("#yellow").toggleClass("yellowActive");
+         setTimeout(function(){
+            $("#yellow").toggleClass("yellowActive");
+         }, 1000);
+      };
+
+      var Green = function(){
+         //when called, this function will light up #green and play a designated sound
+         var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
+         audio.play();
+         $("#green").toggleClass("greenActive");
+         setTimeout(function(){
+            $("#green").toggleClass("greenActive");
+         }, 1000);
+      };
+
+      $(document).ready(function(){
+         $("button").click(function(){
+            compArr.push(randomizer());
+            console.log(compArr);
+         });
+      });
+
+
+
+      //computer starts with empty pattern - done
+      //randomizer function returns a random color function
+      //each color has a function to light up and make a sound - done
+         //computer randomizes pattern - function will return random number 1-4
+         //computer plays pattern - initiate sound/light pattern of color
+         //user mimics pattern - each click initates sound/light function and stores into new array
+         //computer stores user's pattern
+         //computer compares user & computer pattern
+      //if they match
+         //computer adds to pattern
+         //computer plays pattern
+         //user mimcs pattern
+         //computer stores user's pattern
+         //computer compares user & computer pattern
+      //if they don't
+         //computer sends error message

@@ -21,6 +21,7 @@ html
          br
          input#searchTxt(type='text', placeholder='search')
          button#searchBtn go
+         button#randomBtn random
       br
       #0.results.zero
       #1.results.one
@@ -58,7 +59,6 @@ html
                      format: "json"
                   },
                   success: function (response) {
-                     console.log(response);
                      $('.results').empty();
                      var keys = Object.keys(response.query.pages);
                      for (var i = 0; i < keys.length; i++) {
@@ -70,10 +70,28 @@ html
                      }
                   }
                });
-               //https://www.js.mediawiki.org/wiki/API:Main_page
-               //turn that into an api call
-               //http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=
-               //return jsonp info from api
+            });
+            $("#randomBtn").click(function () {
+               var link = "https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=10";
+               jQuery.ajax({
+                  url: link,
+                  jsonp: "callback",
+                  dataType: "jsonp",
+                  data: {
+                     q: "select 	title,abstract,url from search.news where query=\"\"",
+                     format: "json"
+                  },
+                  success: function (response) {
+                     console.log(response);
+                     $('.results').empty();
+                     var keys = Object.keys(response.query.random);
+                     for (var i = 0; i < keys.length; i++) {
+                        console.log(response.query.random[keys[i]].toString());
+                        var sendItTo = "#" + i.toString();
+                        $(sendItTo).append("<h1><a href='http://en.wikipedia.org/?curid=" + response.query.random[keys[i]].id.toString() + "'>" + response.query.random[keys[i]].title.toString() + "</a></h1><br>");
+                     }
+                  }
+               });
             });
          })
 

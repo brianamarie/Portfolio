@@ -29,14 +29,22 @@ h6 {
     padding: 5px;
 }
 
-#searchBtn{
+button {
     margin-left: 0px;
     margin-right: 0px;
     height: 4em;
-    width: 4em;
     border-radius: 10px;
     background-color: #6D326D;
-    color: #FFFFFF;
+}
+
+#searchBtn {
+    color: white;
+    width: 4em;
+}
+
+#randomBtn {
+    width: 5em;
+    color: white;
 }
 
 input {

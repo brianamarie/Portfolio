@@ -57,6 +57,21 @@ html
          var choice = undefined;
          var randomNumber = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
 
+         var reset = function () {
+            optionBox = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            console.log(optionBox);
+            $('.square').empty();
+            $("#1").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#2").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#3").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#4").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#5").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#6").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#7").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#8").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+            $("#9").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
+         };
+
          function dangerZone(){
             randomNumber = optionBox[Math.floor(Math.random() * (optionBox.length - 1) + 1)];
             if (($("#1").hasClass("user") && $("#2").hasClass("user")) && !$("#3").hasClass("occupado") ||
@@ -332,20 +347,11 @@ html
             compResponse();
             checkWin();
          })
-         $("#newGame").click(function () {
-            optionBox = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-            console.log(optionBox);
-            $('.square').empty();
-            $("#1").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-            $("#2").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-            $("#3").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-            $("#4").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-            $("#5").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-            $("#6").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-            $("#7").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-            $("#8").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-            $("#9").css('color', 'white').removeClass("user").removeClass("comp").removeClass("occupado");
-         })
+
+
+         $("#newGame").click(function(){
+            reset();
+         });
 
 
 

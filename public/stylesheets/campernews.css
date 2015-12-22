@@ -1,0 +1,58 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #B0BBC7;
+}
+
+p {
+    color: #D5F2D4;
+}
+
+.background {
+    background-color: #4D435B;
+}
+
+h1 {
+    font-size: 1.5em;
+    float: right;
+    padding: 20px;
+    margin-right: 7%;
+    margin-left: 7%;
+    border: 7px solid #A9FDAC;
+    background-color: #D5F2D4;
+}
+
+h2 {
+    color: #B0BBC7;
+}
+
+.news {
+    width: 700px;
+    font-size: 0.7em;
+    padding: 20px;
+    margin: 15px;
+}
+
+.title {
+    padding: 2px;
+    color: #B0BBC7;
+}
+
+.description {
+    padding: 2px;
+    font-size: 1.25em;
+    background-color: rgba (100,100,100,0.7);
+}
+
+.originalPost {
+    padding: 2px;
+    font-size: 1.25em;
+}
+
+.votes {
+    padding: 2px;
+    font-size: 1.25em;
+}
+
+a {
+    color: #E8F5D8;
+}

@@ -1,0 +1,62 @@
+//
+   Created by Briana on 12/22/15.
+
+//
+   Created by Briana on 10/27/15.
+doctype html
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/campernews.css')
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
+      link(href='http://fonts.googleapis.com/css?family=Patua+One', rel='stylesheet', type='text/css')
+      link(href='http://fonts.googleapis.com/css?family=Niconne', rel='stylesheet', type='text/css')
+      script(src="https://fb.me/react-0.13.3.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+   block content
+   body.background
+      .container
+         h1 Camper News
+         .news
+
+      script.
+         var newsLink = function (title) {
+            newTitle = title.split('');
+            var titleArr = [];
+            var re = new RegExp("[a-zA-Z]");
+            for (var j = 0; j < newTitle.length; j++) {
+               if (re.test(newTitle[j])) {
+                  titleArr.push(newTitle[j].toLowerCase())
+               } else if ((newTitle[j] === " ") &&
+                       (newTitle[j - 2] !== " ")) {
+                  titleArr.push("-")
+               }
+               ;
+            }
+            var titleStr = titleArr.join('');
+            var storyLink = "http://www.freecodecamp.com/news/" + titleStr;
+            return storyLink;
+         }
+         jQuery.ajax({
+            url: "http://www.freecodecamp.com/stories/hotStories",
+            jsonp: "callback",
+            dataType: "json",
+            data: {
+               q: "select 	title,abstract,url from search.news where query=\"\"",
+               format: "json"
+            },
+            success: function (response) {
+               for (var i = 0; i < response.length; i++) {
+                  var link = response[i].link.toString();
+                  $('.news').append("<h2 class='title'>" + response[i].headline.toString() + "</h2>");
+                  $('.news').append("<p class='description'>" + response[i].metaDescription.toString() + "<a href='" + link + "'> Continue reading </a></p>");
+                  $('.news').append('<p class="originalPost"><a href="' + newsLink(response[i].headline.toString()) + '"> Posted by: ' + response[i].author.username.toString() + '</a><p>');
+                  $('.news').append("<p class='votes'>Votes: " + response[i].upVotes.length.toString() + "</p><br>");
+               }
+            }
+         });
+

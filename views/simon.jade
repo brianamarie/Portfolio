@@ -32,14 +32,25 @@ html
       //computer starts with empty pattern
       var compArr = [];
 
-      var randomizer = function(){
-      //function returns a random color function
-         var colorFunctionChoices = [Red(), Blue(), Yellow(), Green()];
-         var random = Math.floor(Math.random() * (4 - 1)) + 1;
-         return colorFunctionChoices[1];
+      function randomizer(){
+      //function returns a random number 1-4
+         var random = Math.floor((Math.random() * (5 - 1)) + 1);
+         compArr.push(random);
       };
 
-      var Red = function(){
+      function compPlayer(num){
+         if (num === 1){
+            Red();
+         } else if (num === 2){
+            Blue();
+         } else if (num === 3){
+            Yellow();
+         } else if (num === 4){
+            Green();
+         };
+      }
+
+      function Red(){
          //when called, this function will light up #red and play a designated sound
          var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
          audio.play();
@@ -50,7 +61,7 @@ html
          }, 1000);
       };
 
-      var Blue = function(){
+      function Blue(){
          //when called, this function will light up #blue and play a designated sound
          var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
          audio.play();
@@ -61,7 +72,7 @@ html
          }, 1000);
       };
 
-      var Yellow = function(){
+      function Yellow(){
          //when called, this function will light up #yellow and play a designated sound
          var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
          audio.play();
@@ -72,7 +83,7 @@ html
          }, 1000);
       };
 
-      var Green = function(){
+      function Green(){
          //when called, this function will light up #green and play a designated sound
          var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
          audio.play();
@@ -84,15 +95,16 @@ html
 
       $(document).ready(function(){
          $("button").click(function(){
-            compArr.push(randomizer());
-            console.log(compArr);
+            randomizer();
+            compArr.forEach(function(entry){
+               compPlayer(entry);
+            });
          });
       });
 
 
-
       //computer starts with empty pattern - done
-      //randomizer function returns a random color function
+      //randomizer function returns a random number 1-4
       //each color has a function to light up and make a sound - done
          //computer randomizes pattern - function will return random number 1-4
          //computer plays pattern - initiate sound/light pattern of color

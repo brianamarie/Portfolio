@@ -20,7 +20,16 @@ html
            .row
               h1 Simon Game
            .row
-              button Start
+              .col-xs-3
+                 h3 Current # of steps:
+              .col-xs-3
+                 h3#currentLength 0
+              .col-xs-3
+                 button#restart Restart
+              .col-xs-3
+                 button#strict Enable Strict Mode
+           .row
+              button#start Start
            .row
               .col-xs-6#red.color Red
               .col-xs-6#blue.color Blue
@@ -57,15 +66,33 @@ html
          };
       }
 
+      var time = 1300;
+
+      function timer(){
+         if (compArr.length < 5){
+            time = 1300;
+         } else if ((compArr.length >= 5) &&
+                 (compArr.length < 9)){
+            time = 1000;
+         } else if ((compArr.length >= 9) &&
+                 (compArr.length < 13)){
+            time = 800;
+         } else if (compArr.length >= 13){
+            time = 600;
+         };
+      };
+
       function Red(){
          //when called, this function will light up #red and play a designated sound
          var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
          audio.play();
 
+         timer();
+
          $("#red").toggleClass("redActive");
          setTimeout(function(){
             $("#red").toggleClass("redActive");
-         }, 1000);
+         }, time);
       };
 
       function Blue(){
@@ -73,10 +100,12 @@ html
          var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
          audio.play();
 
+         timer();
+
          $("#blue").toggleClass("blueActive");
             setTimeout(function(){
             $("#blue").toggleClass("blueActive");
-         }, 1000);
+         }, time);
       };
 
       function Yellow(){
@@ -84,20 +113,26 @@ html
          var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
          audio.play();
 
+         timer();
+
          $("#yellow").toggleClass("yellowActive");
          setTimeout(function(){
             $("#yellow").toggleClass("yellowActive");
-         }, 1000);
+         }, time);
       };
 
       function Green(){
          //when called, this function will light up #green and play a designated sound
          var audio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
          audio.play();
+
+         timer();
+
+
          $("#green").toggleClass("greenActive");
          setTimeout(function(){
             $("#green").toggleClass("greenActive");
-         }, 1000);
+         }, time);
       };
 
       function sequencePlayer(){
@@ -110,6 +145,7 @@ html
             i += 1;
          });
          userArr = [];
+         $("#currentLength").html(compArr.length);
       };
 
       function redClick(){
@@ -141,16 +177,28 @@ html
       };
 
       function compare(){
+         if (userArr.length === 20){
+            if (compArr.join() === userArr.join()){
+               setTimeout(function(){
+                  alert("You've done it! You've won! Now...again!");
+               }, 1000);
+               compArr = [];
+               userArr = [];
+               sequencePlayer();
+            }
+         }
          if (compArr.length === userArr.length){
             if (compArr.join() === userArr.join()){
-               console.log("it's true")
                sequencePlayer();
             } else {
                if (strict){
-                  alert("You lost. Try again! Or don't.");
+                  setTimeout(function(){
+                     alert("You lost. Try again! Or don't.");
+                  }, 1000);
                   userArr = [];
                   compArr = [];
                   userError = false;
+                  sequencePlayer();
                } else {
                   setTimeout(function(){
                      alert("Whoops...let's try that again.");
@@ -172,10 +220,8 @@ html
       }
 
       $(document).ready(function(){
-         $("button").click(function(){
+         $("#start").click(function(){
             sequencePlayer();
-            console.log(compArr);
-            console.log(userArr);
          });
 
          $("#red").click(function(){
@@ -198,6 +244,24 @@ html
             compare();
          });
 
+         $("#restart").click(function(){
+            compArr = [];
+            userArr = [];
+            userError = false;
+            sequencePlayer();
+         });
+
+         $("#strict").click(function(){
+            if (strict === false){
+               $("#strict").html("Disable Strict Mode");
+               strict = true;
+            } else {
+               $("#strict").html("Enable Strict Mode");
+               strict = false;
+            }
+
+         });
+
       });
 
 
@@ -212,8 +276,14 @@ html
       //if they match - done
          //computer adds to pattern - done
          //computer plays pattern - done
-         //user mimcs pattern
-         //computer stores user's pattern
-         //computer compares user & computer pattern
-      //if they don't
-         //computer sends error message
+         //user mimcs pattern - done
+         //computer stores user's pattern - done
+         //computer compares user & computer pattern - done
+      //if they don't - done
+         //computer sends error message - done
+      //User Story: I can see how many steps are in the current series of button presses. - done
+      //User Story: If I want to restart, I can hit a button to do so, and the game will return to a single step. - done
+      //User Story: I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses. - done
+      //User Story: The tempo of the game speeds up incrementally on the 5th, 9th and 13th step.
+      //once user reaches 20
+         //User Story: I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over. - done

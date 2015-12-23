@@ -35,6 +35,8 @@ html
       //user starts with empty pattern
       var userArr = [];
 
+      var userError = false;
+
       var strict = false;
 
       function randomizer(){
@@ -140,30 +142,34 @@ html
 
       function compare(){
          if (compArr.length === userArr.length){
-            for (var j = 0; j<compArr.length; j++){
-               if (compArr[j] !== userArr[j]) {
-                  if (strict){
-                     alert("You lost. Try again! Or don't.");
-                     gameLost = true;
-                     userArr = [];
-                     compArr = [];
-                  } else {
+            if (compArr.join() === userArr.join()){
+               console.log("it's true")
+               sequencePlayer();
+            } else {
+               if (strict){
+                  alert("You lost. Try again! Or don't.");
+                  userArr = [];
+                  compArr = [];
+                  userError = false;
+               } else {
+                  setTimeout(function(){
                      alert("Whoops...let's try that again.");
-                     compArr.forEach(function(entry){
-                        setTimeout(function(){
+                  }, 1000);
+                  userArr = [];
+                  userError = false;
+                  compArr.forEach(function(entry) {
+                     var i = 1;
+                     compArr.forEach(function (entry) {
+                        setTimeout(function () {
                            compPlayer(entry);
                         }, (1000 * i));
                         i += 1;
                      });
-                     userArr = [];
-                  };
+                  });
                };
             };
-            if (!gameLost){
-               sequencePlayer();
-            };
-         };
-      };
+         }
+      }
 
       $(document).ready(function(){
          $("button").click(function(){

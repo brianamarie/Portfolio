@@ -39,6 +39,10 @@ $(document).ready(function(){
         animateInfo('.pomodoro','#pomodoroInfo');
     })
 
+    $('.simon').hover(function(){
+        animateInfo('.simon', '#simonInfo');
+    });
+    
     $('.twitch').hover(function(){
         animateInfo('.twitch','#twitchInfo');
     })

@@ -278,6 +278,10 @@ li:last-child {
   background-image: url("/images/quote.png")
 }
 
+.simon {
+  background-image: url("/images/simon.png");
+}
+
 .twitch {
   background-image: url("/images/twitch.png");
 }

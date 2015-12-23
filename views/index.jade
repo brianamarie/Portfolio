@@ -32,28 +32,33 @@ block content
       .row
         .row.text-center
           a(name="portfolio")
-          a(href='http://www.swiftwilliamswedding.com').portfolio.wedding.col-xs-12.col-sm-4
+          a(href='http://www.swiftwilliamswedding.com').portfolio.wedding.col-xs-12.col-sm-6
             #weddingInfo.info.hidden-xs.hidden.left.text-center
               h1 Wedding Site
               p Full-stack project for my own wedding. Node, express, react, MongoDB, & mailgun.
+          a(href='/simon').portfolio.simon.col-xs-12.col-sm-6
+            #simonInfo.info.hidden-xs.hidden.right.text-center
+              h1 Simon Game
+              p JavaScript, bootstrap, jQuery, fun and functional Simon game.
+        .row.text-center
           a(href='/tictactoe').portfolio.tictactoe.col-xs-12.col-sm-4
-            #tictactoeInfo.info.hidden-xs.hidden.text-center
+            #tictactoeInfo.info.hidden-xs.hidden.text-center.left
               h1 Tic-Tac-Toe
               p A front-end original game that doesn't like to lose. jQuery, JavaScript, Bootstrap.
           a(href='/campernews').portfolio.campernews.col-xs-12.col-sm-4
-            #campernewsInfo.info.hidden-xs.hidden.right.text-center
+            #campernewsInfo.info.hidden-xs.hidden.text-center
               h1 Camper News
               p Simple RESTful API used to display information. jQuery, JavaScript, RESTful API.
-        .row
           a(href='/calculator').portfolio.calculator.col-xs-12.col-sm-4
-            #calculatorInfo.info.hidden-xs.hidden.left.text-center
+            #calculatorInfo.info.hidden-xs.hidden.right.text-center
               h1 Calculator
               p Mobile responsive JavaScript powered calculator app.
-          a(href='/wikiview').portfolio.wikipedia.col-xs-12.col-sm-4
-            #wikiInfo.info.hidden-xs.hidden.text-center
+        .row
+          a(href='/wikiview').portfolio.wikipedia.col-xs-12.col-sm-6
+            #wikiInfo.info.hidden-xs.hidden.text-center.left
               h1 Wikipedia Viewer
               p Wikipedia API using JSON. Search wiki and view results using this in-browser app.
-          a(href='/weather').portfolio.weather.col-xs-12.col-sm-4
+          a(href='/weather').portfolio.weather.col-xs-12.col-sm-6
             #weatherInfo.info.hidden-xs.hidden.right.text-center
               h1 Weather Page
               p API calls using JSON to display the weather in the current user's location.

@@ -22,15 +22,20 @@ html
            .row
               button Start
            .row
-              .col-xs-6#red Red
-              .col-xs-6#blue Blue
+              .col-xs-6#red.color Red
+              .col-xs-6#blue.color Blue
            .row
-              .col-xs-6#yellow Yellow
-              .col-xs-6#green Green
+              .col-xs-6#yellow.color Yellow
+              .col-xs-6#green.color Green
            .row
    script.
       //computer starts with empty pattern
       var compArr = [];
+
+      //user starts with empty pattern
+      var userArr = [];
+
+      var gameLost = false;
 
       function randomizer(){
       //function returns a random number 1-4
@@ -93,27 +98,103 @@ html
          }, 1000);
       };
 
+      function sequencePlayer(){
+         randomizer();
+         var i = 1;
+         compArr.forEach(function(entry){
+            setTimeout(function(){
+               compPlayer(entry);
+            }, (1000 * i));
+            i += 1;
+         });
+         userArr = [];
+      };
+
+      function redClick(){
+         //color function will initiate
+         Red();
+         //that color's number will be added to userArr
+         userArr.push(1);
+      };
+
+      function blueClick(){
+         //color function will initiate
+         Blue();
+         //that color's number will be added to userArr
+         userArr.push(2);
+      };
+
+      function yellowClick(){
+         //color function will initiate
+         Yellow();
+         //that color's number will be added to userArr
+         userArr.push(3);
+      };
+
+      function greenClick(){
+         //color function will initiate
+         Green();
+         //that color's number will be added to userArr
+         userArr.push(4);
+      };
+
+      function compare(){
+         if (compArr.length === userArr.length){
+            for (var j = 0; j<compArr.length; j++){
+               if (compArr[j] !== userArr[j]) {
+                  alert("You lost. Try again! Or don't.");
+                  gameLost = true;
+                  userArr = [];
+                  compArr = [];
+               };
+            };
+            if (!gameLost){
+               sequencePlayer();
+            };
+         };
+      };
+
       $(document).ready(function(){
          $("button").click(function(){
-            randomizer();
-            compArr.forEach(function(entry){
-               compPlayer(entry);
-            });
+            sequencePlayer();
+            console.log(compArr);
+            console.log(userArr);
          });
+
+         $("#red").click(function(){
+            redClick();
+            compare();
+         });
+
+         $("#blue").click(function(){
+            blueClick();
+            compare();
+         });
+
+         $("#yellow").click(function(){
+            yellowClick();
+            compare();
+         });
+
+         $("#green").click(function(){
+            greenClick();
+            compare();
+         });
+
       });
 
 
       //computer starts with empty pattern - done
-      //randomizer function returns a random number 1-4
+      //randomizer function returns a random number 1-4 - done
       //each color has a function to light up and make a sound - done
-         //computer randomizes pattern - function will return random number 1-4
-         //computer plays pattern - initiate sound/light pattern of color
-         //user mimics pattern - each click initates sound/light function and stores into new array
-         //computer stores user's pattern
-         //computer compares user & computer pattern
-      //if they match
-         //computer adds to pattern
-         //computer plays pattern
+         //computer randomizes pattern - function will return random number 1-4 - done
+         //computer plays pattern - initiate sound/light pattern of color - done
+         //user mimics pattern - each click initates sound/light function and stores into new array - done
+         //computer stores user's pattern - done
+         //computer compares user & computer pattern - done
+      //if they match - done
+         //computer adds to pattern - done
+         //computer plays pattern - done
          //user mimcs pattern
          //computer stores user's pattern
          //computer compares user & computer pattern

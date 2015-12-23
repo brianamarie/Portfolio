@@ -35,7 +35,7 @@ html
       //user starts with empty pattern
       var userArr = [];
 
-      var gameLost = false;
+      var strict = false;
 
       function randomizer(){
       //function returns a random number 1-4
@@ -142,10 +142,21 @@ html
          if (compArr.length === userArr.length){
             for (var j = 0; j<compArr.length; j++){
                if (compArr[j] !== userArr[j]) {
-                  alert("You lost. Try again! Or don't.");
-                  gameLost = true;
-                  userArr = [];
-                  compArr = [];
+                  if (strict){
+                     alert("You lost. Try again! Or don't.");
+                     gameLost = true;
+                     userArr = [];
+                     compArr = [];
+                  } else {
+                     alert("Whoops...let's try that again.");
+                     compArr.forEach(function(entry){
+                        setTimeout(function(){
+                           compPlayer(entry);
+                        }, (1000 * i));
+                        i += 1;
+                     });
+                     userArr = [];
+                  };
                };
             };
             if (!gameLost){

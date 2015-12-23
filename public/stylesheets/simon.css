@@ -1,19 +1,60 @@
-.redActive {
+.button {
+    width: 90%;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.color {
+    font-size: 3em;
+    width: 80%;
+    padding: 30px;
+}
+
+.red {
     background-color: red;
     color: white;
+    border-top-left-radius: 50px;
+}
+
+.redActive {
+    background-color: #4d0000;
+    color: white;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+    border-top-right-radius: 50px;
 }
 
 .blueActive {
-    background-color: blue;
+    background-color: #00004d;
     color: white;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+    border-bottom-left-radius: 50px;
 }
 
 .yellowActive {
-    background-color: yellow;
+    background-color: #666600;
     color: white;
 }
 
-.greenActive {
+.green {
     background-color: green;
+    color: white;
+    border-bottom-right-radius: 50px;
+}
+
+.greenActive {
+    background-color: #004d00;
     color: white;
 }

@@ -16,26 +16,30 @@ html
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
    block content
       body
-        .container
+        .container.text-center
            .row
               h1 Simon Game
            .row
-              .col-xs-3
+              .hidden-xs.col-sm-3
+              .col-xs-6.col-sm-3
                  h3 Current # of steps:
-              .col-xs-3
+              .col-xs-6.col-sm-3
                  h3#currentLength 0
-              .col-xs-3
-                 button#restart Restart
-              .col-xs-3
-                 button#strict Enable Strict Mode
+              .hidden-xs.col-sm-3
            .row
-              button#start Start
+              .col-xs-4
+                 #start.button Start
+              .col-xs-4
+                 #restart.button Restart
+              .col-xs-4
+                 #strict.button Enable Strict Mode
+           br
            .row
-              .col-xs-6#red.color Red
-              .col-xs-6#blue.color Blue
+              .col-xs-6.red.color Red
+              .col-xs-6.blue.color Blue
            .row
-              .col-xs-6#yellow.color Yellow
-              .col-xs-6#green.color Green
+              .col-xs-6.yellow.color Yellow
+              .col-xs-6.green.color Green
            .row
    script.
       //computer starts with empty pattern
@@ -89,9 +93,9 @@ html
 
          timer();
 
-         $("#red").toggleClass("redActive");
+         $(".red").toggleClass("redActive");
          setTimeout(function(){
-            $("#red").toggleClass("redActive");
+            $(".red").toggleClass("redActive");
          }, time);
       };
 
@@ -102,9 +106,9 @@ html
 
          timer();
 
-         $("#blue").toggleClass("blueActive");
+         $(".blue").toggleClass("blueActive");
             setTimeout(function(){
-            $("#blue").toggleClass("blueActive");
+            $(".blue").toggleClass("blueActive");
          }, time);
       };
 
@@ -115,9 +119,9 @@ html
 
          timer();
 
-         $("#yellow").toggleClass("yellowActive");
+         $(".yellow").toggleClass("yellowActive");
          setTimeout(function(){
-            $("#yellow").toggleClass("yellowActive");
+            $(".yellow").toggleClass("yellowActive");
          }, time);
       };
 
@@ -129,9 +133,9 @@ html
          timer();
 
 
-         $("#green").toggleClass("greenActive");
+         $(".green").toggleClass("greenActive");
          setTimeout(function(){
-            $("#green").toggleClass("greenActive");
+            $(".green").toggleClass("greenActive");
          }, time);
       };
 
@@ -224,22 +228,22 @@ html
             sequencePlayer();
          });
 
-         $("#red").click(function(){
+         $(".red").click(function(){
             redClick();
             compare();
          });
 
-         $("#blue").click(function(){
+         $(".blue").click(function(){
             blueClick();
             compare();
          });
 
-         $("#yellow").click(function(){
+         $(".yellow").click(function(){
             yellowClick();
             compare();
          });
 
-         $("#green").click(function(){
+         $(".green").click(function(){
             greenClick();
             compare();
          });
@@ -263,27 +267,3 @@ html
          });
 
       });
-
-
-      //computer starts with empty pattern - done
-      //randomizer function returns a random number 1-4 - done
-      //each color has a function to light up and make a sound - done
-         //computer randomizes pattern - function will return random number 1-4 - done
-         //computer plays pattern - initiate sound/light pattern of color - done
-         //user mimics pattern - each click initates sound/light function and stores into new array - done
-         //computer stores user's pattern - done
-         //computer compares user & computer pattern - done
-      //if they match - done
-         //computer adds to pattern - done
-         //computer plays pattern - done
-         //user mimcs pattern - done
-         //computer stores user's pattern - done
-         //computer compares user & computer pattern - done
-      //if they don't - done
-         //computer sends error message - done
-      //User Story: I can see how many steps are in the current series of button presses. - done
-      //User Story: If I want to restart, I can hit a button to do so, and the game will return to a single step. - done
-      //User Story: I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses. - done
-      //User Story: The tempo of the game speeds up incrementally on the 5th, 9th and 13th step.
-      //once user reaches 20
-         //User Story: I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over. - done

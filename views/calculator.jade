@@ -3,20 +3,9 @@
 doctype html
 html
     head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/calculator.css')
-        meta(name="viewport", content="width=device-width, initial-scale=1")
-        link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
-        link(href='http://fonts.googleapis.com/css?family=Patua+One', rel='stylesheet', type='text/css')
-        link(href='http://fonts.googleapis.com/css?family=Niconne', rel='stylesheet', type='text/css')
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
-        // Font awesome
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
-        // Latest compiled and minified JavaScript
-        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
-        script(src="https://fb.me/react-0.13.3.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    title= title
+    include ./header.jade
+    link(rel='stylesheet', href='/stylesheets/calculator.css')
     block content
         body
             .text-center
@@ -81,6 +70,9 @@ html
                                     .numberButtons.social
                                         i.fontawesome-.fa-youtube
                     br
+                br
+            br
+    include ./footer
 
     script.
         /**

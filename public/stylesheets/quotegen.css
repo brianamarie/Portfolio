@@ -1,4 +1,4 @@
-button {
+button.quotes {
     background-color: #49C48E;
     color: #40727B;
     margin: 0 auto;
@@ -8,7 +8,7 @@ button {
     border-radius:30px;
 }
 
-div{
+div.quotes{
     background-color: #49C48E;
     color: #111C76;
     margin: 0 auto;
@@ -16,7 +16,7 @@ div{
     border: 2px solid #111C76;
 }
 
-p{
+p.quotes{
     font-family: 'Patua One', cursive;
     font-size: 1em;
 }
@@ -40,9 +40,3 @@ p{
 .viewCode{
     width: 20%;
 }
-
-body color- other blue
-body text- blue
-quote div- signature dish OR misery seafoam
-quote div text- china blue
-author text- blue

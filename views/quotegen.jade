@@ -4,14 +4,10 @@ doctype html
 html
    head
       title= title
+      include ./header.jade
       link(rel='stylesheet', href='/stylesheets/quotegen.css')
-      meta(name="viewport", content="width=device-width, initial-scale=1")
-      link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
       link(href='http://fonts.googleapis.com/css?family=Patua+One', rel='stylesheet', type='text/css')
       link(href='http://fonts.googleapis.com/css?family=Niconne', rel='stylesheet', type='text/css')
-      script(src="https://fb.me/react-0.13.3.js")
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
    block content
       body(class='body')
          br
@@ -19,14 +15,17 @@ html
          br
          h4(class='text-center') This quote generator was created as a zipline for Free Code Camp. The hand-picked quotes are some of my personal favorites.
          br
-         div(class='container')
+         div.quotes(class='container')
             h3.append(align='center')
             br
             h2.author
          br
          form(align='center')
             a.twitter-share-button(href="https://twitter.com/intent/tweet" rel="") Tweet
-            button(onclick='history.go(0)')  +
+            br
+            button.quotes(onclick='history.go(0)')  +
+      br
+      include ./footer.jade
 
          // <a href="https://twitter.com/share" class="twitter-share-button" data-via="brianamarie132" data-related="freecodecamp" data-hashtags="learntocode">Tweet</a>!
          script.

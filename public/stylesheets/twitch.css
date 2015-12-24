@@ -1,5 +1,12 @@
+body {
+    background-color: rgb(10, 200, 180);
+    color: black;
+}
 
+a.twitchlinks {
+    color: black;
+}
 
-.background{
-    background-color: rgb(100,170,100);
+.nav2 {
+    margin-top: -30px;
 }

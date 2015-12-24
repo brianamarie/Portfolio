@@ -7,15 +7,11 @@ doctype html
 html
    head
       title= title
+      include ./header.jade
       link(rel='stylesheet', href='/stylesheets/weather.css')
-      meta(name="viewport", content="width=device-width, initial-scale=1")
-      link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
-      script(src="https://fb.me/react-0.13.3.js")
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
    block content
       body
-         div(class="container text-center shade")
+         .container.text-center.shade
             h1.response
             button.f Metric
             br
@@ -24,6 +20,8 @@ html
             h3.rain
             br
             h3.wind
+      include ./footer.jade
+
    script.
       var city = "";
       var zip = "";
@@ -72,12 +70,12 @@ html
                            if ($('button').hasClass('.f')) {
                               $('.temp').html(response.current_observation.temp_f.toString() + "&#176;f");
                               $('button').removeClass('.f');
-                              $('button').html("Metric");
+                              $('.f').html("Metric");
                               $('.rain').html(response.current_observation.precip_1hr_in.toString() + '" of precipitation this hour');
                               $('.wind').html("Wind: " + response.current_observation.wind_string);
                            } else {
                               $('button').addClass('.f');
-                              $('button').html("Imperial");
+                              $('.f').html("Imperial");
                               $('.temp').html(response.current_observation.temp_c.toString() + "&#176;c");
                               $('.rain').html(response.current_observation.precip_1hr_metric.toString() + 'mm of precipitation this hour');
                               $('.wind').html("Wind: " + response.current_observation.wind_kph + " KPH from the " + response.current_observation.wind_dir);

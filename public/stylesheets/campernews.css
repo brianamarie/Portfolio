@@ -3,7 +3,11 @@ body {
     color: #B0BBC7;
 }
 
-p {
+.nav2 {
+    margin-top: -40px;
+}
+
+p.cnews {
     color: #D5F2D4;
 }
 
@@ -11,7 +15,7 @@ p {
     background-color: #4D435B;
 }
 
-h1 {
+h1.cnews {
     font-size: 1.5em;
     float: right;
     padding: 20px;
@@ -21,7 +25,7 @@ h1 {
     background-color: #D5F2D4;
 }
 
-h2 {
+h2.cnews {
     color: #B0BBC7;
 }
 
@@ -53,6 +57,6 @@ h2 {
     font-size: 1.25em;
 }
 
-a {
+a.cnews {
     color: #E8F5D8;
 }

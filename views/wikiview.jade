@@ -5,20 +5,18 @@ doctype html
 html
    head
       title= title
-      meta(name="viewport", content="width=device-width, initial-scale=1")
-      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==', crossorigin='anonymous')
-      link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css')
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+      include ./header.jade
       script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js')
       link(rel='stylesheet', href='/stylesheets/wikiview.css')
    block content
+      br
       .header
-         h1 Wikipedia Viewer
-         h6 Type below, then press go.
+         h1.wiki Wikipedia Viewer
+         h6.wiki Type below, then press go.
          br
-         input#searchTxt(type='text', placeholder='search')
-         button#searchBtn go
-         button#randomBtn random
+         input.wiki#searchTxt(type='text', placeholder='search')
+         button.wiki#searchBtn go
+         button.wiki#randomBtn random
       br
       #0.results.zero
       #1.results.one
@@ -30,6 +28,7 @@ html
       #7.results.seven
       #8.results.eight
       #9.results.nine
+   include ./footer.jade
       script.
          /**
           * Created by Briana on 10/26/15.
@@ -61,7 +60,7 @@ html
                      for (var i = 0; i < keys.length; i++) {
                         console.log(response.query.pages[keys[i]].extract.toString());
                         var sendItTo = "#" + i.toString();
-                        $(sendItTo).append("<h1><a href='http://en.wikipedia.org/?curid=" + response.query.pages[keys[i]].pageid.toString() + "'>" + response.query.pages[keys[i]].title.toString() + "</a></h1><br>");
+                        $(sendItTo).append("<h1><a href='http://en.wikipedia.org/?curid=" + response.query.pages[keys[i]].pageid.toString() + "' class='wiki'>" + response.query.pages[keys[i]].title.toString() + "</a></h1><br>");
                         $(sendItTo).append(response.query.pages[keys[i]]);
                         $(sendItTo).append("<p>" + response.query.pages[keys[i]].extract.toString() + "</p><br>");
                      }

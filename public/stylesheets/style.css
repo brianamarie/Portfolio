@@ -87,13 +87,13 @@ body {
 .nav2 {
   background-color: #3C474B;
   color: white;
-  height: 15em;
+  height: 7em;
 }
 
 .nav3 {
   background-color: #3C474B;
   color: white;
-  height: 11em;
+  height: 16em;
 }
 
 .background {
@@ -201,7 +201,7 @@ li:last-child {
 .img-center{
   margin: 0 auto;
   width: 100%;
-  border: 1px solid #F7F7F7;
+  border: 1px solid #F7F7F7;include ./header.jade
 }
 
 .port-img {

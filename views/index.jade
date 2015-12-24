@@ -3,26 +3,8 @@ extends layout
 block content
   body
     .container-fluid
-      .row.nav2
-        nav.navbar.navbar-custom
-          // Brand and toggle get grouped for better mobile display
-          .navbar-header.nameTitle.text-center
-            a(href="#").learnMore
-              h2 BRIANA SWIFT
-          // Collect the nav links, forms, and other content for toggling
-          #bs-example-navbar-collapse-1.collapse.navbar-collapse
-            ul.nav.navbar-nav
-            ul.nav.navbar-nav.navbar-right
-              li
-                a(href='/about').h1.navbar-brand.briananav ABOUT
-              li
-                a(href='/#portfolio').h1.navbar-brand.briananav PORTFOLIO
-              li
-                a(href='/#test').h1.navbar-brand.briananav TESTIMONIALS
-              li
-                a(href='/contact').h1.navbar-brand
-                  button CONTACT
-      .row.nav2.text-center
+      include ./header.jade
+      .row.nav3.text-center
         h1 Web Designer & Front-end Web Developer
         br
         a(href='/#portfolio').learnMore

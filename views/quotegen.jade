@@ -3,7 +3,7 @@
 doctype html
 html
    head
-      title= Quote Generator
+      title= 'Quote Generator'
       include ./header.jade
       link(rel='stylesheet', href='/stylesheets/quotegen.css')
       link(href='http://fonts.googleapis.com/css?family=Patua+One', rel='stylesheet', type='text/css')
@@ -218,7 +218,6 @@ html
             $(document).ready(function(){
                $('.append').append(quotes[current1].quote.toString());
                $('.author').append("-").append(quotes[current1].author.toString());
-               document.title = quotes[current1].quote.toString() + " -" + quotes[current1].author.toString() + " @brianamarie";
             });
 
             //twitter code

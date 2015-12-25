@@ -29,7 +29,6 @@ app.use('/users', users);
 
 app.get('/pomodoro', function (req, res, next) {
   res.render('./pomodoro.jade', { title: 'Pomodoro Timer', message: 'Hello there!'});
-  ga('send', 'pageview', location.pathname);
 });
 
 app.get('/quotegen', function (req, res, next) {

@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/pomodoro', function (req, res, next) {
-  res.render('./pomodoro.jade', { title: 'Pomodoro Timer');
+  res.render('/pomodoro.jade', { title: 'Pomodoro Timer');
 });
 
 

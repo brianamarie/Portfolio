@@ -7,4 +7,4 @@
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-71718842-1', 'auto');
-ga('send', 'pageview', page);
+ga('send', 'pageview');

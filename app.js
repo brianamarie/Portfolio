@@ -75,6 +75,10 @@ app.get('/simon', function(req, res, next) {
   res.render('./simon.jade', {title: 'Simon Game', message: 'Hello there!'});
 });
 
+app.get('/markdown', function(req, res, next) {
+  res.render('./dataVisualZiplines/markdown.jade', {title: 'Markdown Preview', message: 'Hello there!'});
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

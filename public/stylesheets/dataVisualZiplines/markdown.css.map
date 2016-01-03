@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,IAAK;EACH,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,IAAI;EACX,iBAAa;IACX,UAAU,EAAC,IAAI;IACf,MAAM,EAAC,MAAM;IACb,KAAK,EAAC,KAAK",
+"mappings": "AACE,iBAAa;EACX,UAAU,EAAC,IAAI;EACf,MAAM,EAAC,MAAM;EACb,KAAK,EAAC,KAAK",
 "sources": ["markdown.scss"],
 "names": [],
 "file": "markdown.css"

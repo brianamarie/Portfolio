@@ -1,0 +1,9 @@
+body {
+  text-align: center;
+  color: blue; }
+  body > #container {
+    text-align: left;
+    margin: 0 auto;
+    width: 500px; }
+
+/*# sourceMappingURL=markdown.css.map */

@@ -1,4 +1,5 @@
 var HelloWorld = React.createClass({
+
     displayName: "HelloWorld",
 
     render: function () {
@@ -6,4 +7,4 @@ var HelloWorld = React.createClass({
     }
 });
 
-React.render(React.createElement(HelloWorld, null), document.getElementById("mount"));
+React.render(React.createElement(HelloWorld, null), document.getElementById("markdown"));

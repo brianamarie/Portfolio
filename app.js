@@ -79,6 +79,10 @@ app.get('/markdown', function(req, res, next) {
   res.render('./dataVisualZiplines/markdown.jade', {title: 'Markdown Preview', message: 'Hello there!'});
 });
 
+app.get('/leaderboard', function(req, res, next) {
+  res.render('./dataVisualZiplines/leaderboard.jade', {title: 'Leaderboard for FCC Campers', message: 'Hello there!'});
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

@@ -41,18 +41,9 @@ var MarkdownForm = React.createClass({
    }
 });
 
-var MarkdownBoxes = React.createClass({
-    render: function(){
-        return(
-            <div className = "markdownBoxes">
-                <MarkdownForm />
-            </div>
-        );
-    }
-});
 
 var showPage = function(){
-        React.render(<MarkdownBoxes />, document.getElementById('markdown'));
+        React.render(<MarkdownForm />, document.getElementById('markdown'));
 };
 
 showPage();

@@ -9,3 +9,25 @@ body {
 .link {
   color: black;
 }
+
+.markdownBoxes {
+  padding: 20px;
+
+}
+
+textarea {
+  width: 100%;
+  height: 30em;
+  outline: none;
+  resize: none;
+  border: 2px solid black;
+}
+
+.markdownRaw {
+  width: 100%;
+  height: 30em;
+}
+
+.markedText {
+  height: 100%;
+}

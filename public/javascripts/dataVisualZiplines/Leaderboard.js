@@ -1,27 +1,6 @@
 /**
  * Created by Briana on 1/24/16.
  */
-var AllTime = React.createClass({
-    //will return json of alltime
-    render: function() {
-        return (
-            <div className="allTime">
-            Hello,  all time!
-            </div>
-        )
-    }
-});
-
-var Recent = React.createClass({
-    render: function() {
-        return (
-            <div className = "recently">
-                <h1> Hello recently. </h1>
-            </div>
-        )
-    }
-});
-
 var Leader = React.createClass({
     render: function() {
         return (
@@ -40,7 +19,6 @@ var Leader = React.createClass({
 var LeaderBox = React.createClass({
     //box that will display currently selected data
     render: function() {
-        console.log('leaderbox working');
         var leaderNodes = this.props.data.map(function(user){
             return(
                 <Leader
@@ -68,7 +46,35 @@ var LeaderFrame = React.createClass({
     },
     componentDidMount: function() {
         $.ajax({
-            url: this.props.url,
+            url: 'http://fcctop100.herokuapp.com/api/fccusers/top/alltime',
+            dataType: 'json',
+            cache: false,
+            success: function(data) {
+                this.setState({data: data});
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
+    },
+    handleChangeRecent: function(event) {
+        console.log('recent');
+        $.ajax({
+            url: 'http://fcctop100.herokuapp.com/api/fccusers/top/recent',
+            dataType: 'json',
+            cache: false,
+            success: function(data) {
+                this.setState({data: data});
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
+    },
+    handleChangeAlltime: function(event) {
+        console.log('alltime');
+        $.ajax({
+            url: 'http://fcctop100.herokuapp.com/api/fccusers/top/alltime',
             dataType: 'json',
             cache: false,
             success: function(data) {
@@ -83,21 +89,16 @@ var LeaderFrame = React.createClass({
         console.log(this.state.data);
         return (
             <div className="leaderboard">
-                <Recent />
-                <AllTime />
+                <button id="alltime" onClick={this.handleChangeAlltime}> See best of all time! </button>
+                <button id = "recentTime" onClick={this.handleChangeRecent}> See best of recent times! </button>
                 <LeaderBox data={this.state.data} />
-                <button className="alltime"> See best of all time! </button>
-                <button className = "recentTime"> See best of recent times! </button>
             </div>
         )
     }
 });
 
-
-
-
 var showPage = function(){
-    React.render(<LeaderFrame url='http://fcctop100.herokuapp.com/api/fccusers/top/recent' />, document.getElementById('mount'));
+    React.render(<LeaderFrame />, document.getElementById('mount'));
 };
 
 showPage();

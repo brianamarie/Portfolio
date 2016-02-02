@@ -4,13 +4,21 @@
 var Leader = React.createClass({
     render: function() {
         return (
-            <div className="leader">
-                <h2 className="leaderUsername">
-                    {this.props.username}
-                </h2>
-                    <img src={this.props.img} />
+            <div className="leader row">
+                <div className="col-xs-3">
+                    <h2 className="leaderUsername">
+                        {this.props.username}
+                    </h2>
+                </div>
+                <div className="col-xs-3">
+                    <img src={this.props.img} className="center-block img-responsive" />
+                </div>
+                <div className="col-xs-3">
                     <h5> Recent points: {this.props.recent} </h5>
+                </div>
+                <div className="col-xs-3">
                     <h5> All time points: {this.props.alltime} </h5>
+                </div>
             </div>
         );
     }
@@ -89,9 +97,17 @@ var LeaderFrame = React.createClass({
         console.log(this.state.data);
         return (
             <div className="leaderboard">
-                <button id="alltime" onClick={this.handleChangeAlltime}> See best of all time! </button>
-                <button id = "recentTime" onClick={this.handleChangeRecent}> See best of recent times! </button>
-                <LeaderBox data={this.state.data} />
+                <div className="container-fluid">
+                    <row>
+                        <div className="col-xs-12 text-center">
+                            <button id="alltime" className="btn btn-default" onClick={this.handleChangeAlltime}> See best of all time! </button>
+                            <button id = "recentTime" className="btn btn-default" onClick={this.handleChangeRecent}> See best of recent times! </button>
+                        </div>
+                    </row>
+                    <row>
+                        <LeaderBox data={this.state.data} />
+                    </row>
+                </div>
             </div>
         )
     }

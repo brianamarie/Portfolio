@@ -6,6 +6,9 @@ var Leader = React.createClass({
         return (
             <div className="leader row">
                 <div className="col-xs-3">
+                    {this.props.rank} />
+                </div>
+                <div className="col-xs-3">
                     <h2 className="leaderUsername">
                         {this.props.username}
                     </h2>
@@ -14,10 +17,10 @@ var Leader = React.createClass({
                     <img src={this.props.img} className="center-block img-responsive" />
                 </div>
                 <div className="col-xs-3">
-                    <h5> Recent points: {this.props.recent} </h5>
+                    <h5>{this.props.recent} </h5>
                 </div>
                 <div className="col-xs-3">
-                    <h5> All time points: {this.props.alltime} </h5>
+                    <h5>{this.props.alltime} </h5>
                 </div>
             </div>
         );
@@ -30,6 +33,7 @@ var LeaderBox = React.createClass({
         var leaderNodes = this.props.data.map(function(user){
             return(
                 <Leader
+                    rank={user[]}
                     username={user.username}
                     key={user.id}
                     img={user.img}
@@ -102,6 +106,20 @@ var LeaderFrame = React.createClass({
                         <div className="col-xs-12 text-center">
                             <button id="alltime" className="btn btn-default" onClick={this.handleChangeAlltime}> See best of all time! </button>
                             <button id = "recentTime" className="btn btn-default" onClick={this.handleChangeRecent}> See best of recent times! </button>
+                        </div>
+                    </row>
+                    <row>
+                        <div className="col-xs-1">
+                            #
+                        </div>
+                        <div className="col-xs-5">
+                            User
+                        </div>
+                        <div className="col-xs-3">
+                            Recent
+                        </div>
+                        <div className="col-xs-3">
+                            All Time
                         </div>
                     </row>
                     <row>

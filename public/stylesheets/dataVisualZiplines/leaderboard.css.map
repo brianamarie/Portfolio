@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,OAAQ;EACN,MAAM,EAAE,eACV;;AAEA,UAAW;EACT,MAAM,EAAE,eACV;;AAEA,YAAa;EACX,KAAK,EAAE,GAAG",
+"sources": ["leaderboard.scss"],
 "names": [],
 "file": "leaderboard.css"
 }

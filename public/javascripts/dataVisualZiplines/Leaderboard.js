@@ -1,22 +1,22 @@
 var Leader = React.createClass({
     render: function() {
         return (
-            <div className="leader row">
-                <div className="col-xs-1">
+            <div className="leader row border">
+                <div className="col-xs-1 text-center">
                     <h5>{this.props.rank}</h5>
                 </div>
-                <div className="col-xs-2">
+                <div className="col-xs-2 borderLeft">
                     <img src={this.props.img} className="center-block img-responsive" />
                 </div>
-                <div className="col-xs-5">
+                <div className="col-xs-5 borderLeft">
                     <h2 className="leaderUsername">
                         {this.props.username}
                     </h2>
                 </div>
-                <div className="col-xs-2">
+                <div className="col-xs-2 borderLeft">
                     <h5>{this.props.recent} </h5>
                 </div>
-                <div className="col-xs-2">
+                <div className="col-xs-2 borderLeft">
                     <h5>{this.props.alltime} </h5>
                 </div>
             </div>
@@ -96,24 +96,24 @@ var LeaderFrame = React.createClass({
     render: function() {
         console.log(this.state.data);
         return (
-            <div className="leaderboard">
-                <div className="container">
+            <div className="leaderboard container">
+                <div className="container-fluid">
                     <row>
                         <div className="col-xs-1">
-                            <h4>Rank</h4>
+                            <h4>#</h4>
                         </div>
                         <div className="col-xs-7">
                             <h4>User</h4>
                         </div>
                         <div className="col-xs-2">
-                            <button id="alltime" className="btn btn-default" onClick={this.handleChangeAlltime}> Points - all time</button>
+                            <button id="alltime" className="btn btn-default" onClick={this.handleChangeAlltime}>All time</button>
                         </div>
                         <div className="col-xs-2">
-                            <button id = "recentTime" className="btn btn-default" onClick={this.handleChangeRecent}> Points - 30 days </button>
+                            <button id = "recentTime" className="btn btn-default" onClick={this.handleChangeRecent}>30 days </button>
                         </div>
                     </row>
                 </div>
-                <div className="container">
+                <div className="container-fluid">
                     <LeaderBox data={this.state.data} />
                 </div>
             </div>

@@ -2,13 +2,13 @@ var Leader = React.createClass({
     render: function() {
         return (
             <div className="leader row">
-                <div className="col-xs-2">
-                    <h5>Rank</h5>
+                <div className="col-xs-1">
+                    <h5>{this.props.rank}</h5>
                 </div>
-                <div className="col-xs-3">
+                <div className="col-xs-2">
                     <img src={this.props.img} className="center-block img-responsive" />
                 </div>
-                <div className="col-xs-3">
+                <div className="col-xs-5">
                     <h2 className="leaderUsername">
                         {this.props.username}
                     </h2>
@@ -27,9 +27,10 @@ var Leader = React.createClass({
 var LeaderBox = React.createClass({
     //box that will display currently selected data
     render: function() {
-        var leaderNodes = this.props.data.map(function(user){
+        var leaderNodes = this.props.data.map(function(user, rank){
             return(
                 <Leader
+                    rank={rank+1}
                     username={user.username}
                     key={user.id}
                     img={user.img}
@@ -96,12 +97,12 @@ var LeaderFrame = React.createClass({
         console.log(this.state.data);
         return (
             <div className="leaderboard">
-                <div className="container-fluid">
+                <div className="container">
                     <row>
-                        <div className="col-xs-2">
+                        <div className="col-xs-1">
                             <h4>Rank</h4>
                         </div>
-                        <div className="col-xs-6">
+                        <div className="col-xs-7">
                             <h4>User</h4>
                         </div>
                         <div className="col-xs-2">
@@ -111,6 +112,8 @@ var LeaderFrame = React.createClass({
                             <button id = "recentTime" className="btn btn-default" onClick={this.handleChangeRecent}> Points - 30 days </button>
                         </div>
                     </row>
+                </div>
+                <div className="container">
                     <LeaderBox data={this.state.data} />
                 </div>
             </div>

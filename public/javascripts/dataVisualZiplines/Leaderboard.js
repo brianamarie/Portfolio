@@ -14,10 +14,10 @@ var Leader = React.createClass({
                     </h2>
                 </div>
                 <div className="col-xs-2 borderLeft">
-                    <h5>{this.props.recent} </h5>
+                    <h5>{this.props.alltime} </h5>
                 </div>
                 <div className="col-xs-2 borderLeft">
-                    <h5>{this.props.alltime} </h5>
+                    <h5>{this.props.recent} </h5>
                 </div>
             </div>
         );

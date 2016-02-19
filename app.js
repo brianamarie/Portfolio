@@ -83,6 +83,10 @@ app.get('/leaderboard', function(req, res, next) {
   res.render('./dataVisualZiplines/leaderboard.jade', {title: 'Leaderboard for FCC Campers', message: 'Hello there!'});
 });
 
+app.get('/recipe', function(req, res, next) {
+  res.render('./dataVisualZiplines/recipe.jade', {title: 'Recipe Box', message: 'Hello there!'});
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

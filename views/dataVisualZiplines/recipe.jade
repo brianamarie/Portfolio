@@ -1,0 +1,26 @@
+//
+   Created by Briana on 2/19/16.
+doctype html
+html
+   head
+      title=title
+      include ../header.jade
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+      link(rel="stylesheet" href='./stylesheets/dataVisualZiplines/recipe.css')
+   block content
+      h1.text-center Recipe Box
+      h5.text-center Feeling hungry?
+      #mount
+   body
+      br
+      include ../footer.jade
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+      script(src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.28.1/react-bootstrap.min.js")
+      script(src="https://fb.me/JSXTransformer-0.13.3.js")
+      script(src='javascripts/dataVisualZiplines/Leaderboard.js', type = "text/jsx")
+      script(src="https://fb.me/react-0.13.3.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js")
